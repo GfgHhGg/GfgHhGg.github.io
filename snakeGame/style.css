@@ -1,0 +1,45 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Staatliches', cursive;
+}
+
+#canvas {
+   display: block;
+   margin: 0 auto;
+   background-color: black;
+   height: 800px;
+   width: 1200px;
+}
+
+.scoreText {
+   display: block;
+   text-align: center;
+   font-size: 50px;
+   line-height: 54px;
+}
+
+#theEnd {
+   font-size: 100px;
+   position: absolute;
+   color: aliceblue;
+   text-align: center;
+   z-index: -1;
+   left: 50%;
+   transform: translate(-50%, 0);
+   top: 300px;
+}
+#theEnd span {
+   animation: anim 1s linear infinite;
+}
+@keyframes anim{
+   from {
+      opacity: 1;
+   }
+   50%{
+      opacity: .1;
+   }
+   to {
+      opacity: 1;
+   }
+}
