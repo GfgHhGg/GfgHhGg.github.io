@@ -35,6 +35,7 @@ document.onkeydown = function (e) {
    } else if (e.keyCode == 82) {
       restartGame();
    }
+   isKey = false;
 }
 
 function snakeMove() {
@@ -67,16 +68,18 @@ function snakeMove() {
       scoreOut.innerHTML = score;
       if (die()) {
          return;
+      } else {
+         isKey = true;
       }
-   }, 150)
+   }, 200)
 }
 
 function die() {
    var head = snake[0];
-   for (let i = 3; i < snake.length; i++) {
+   for (let i = 4; i < snake.length; i++) {
       if (head.x == snake[i].x && head.y == snake[i].y) {
          ctx.clearRect(0, 0, 1200, 800);
-         isKey = false;
+         clearInterval(timer);
          theEnd.style.zIndex = 1;
          return true;
       }
