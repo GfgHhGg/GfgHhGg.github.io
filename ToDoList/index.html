@@ -10,16 +10,18 @@
 </head>
 
 <body>
-   <form action="#">
-      <p>Наименование:</p>
-      <input type="text" id="taskInp" autocomplete="off" placeholder="Надо пойти и сделать...">
-      <div id="warn">Это поле не может быть пустым</div>
-      <button class="clear btn" onclick="clearForm()">Очистить</button>
-      <p>Описание:</p>
-      <textarea rows="5" id="desc" autocomplete="off" placeholder="Зачем? Как? И почему?"></textarea>
-      <br>
-      <button onclick="addTask()" class="addTaskBtn btn">Добавить Дело</button>
-   </form>
+   <div class='main'>
+      <form>
+         <p>Наименование:</p>
+         <input type="text" id="taskInp" autocomplete="off" placeholder="Надо пойти и сделать...">
+         <div id="warn">Это поле не может быть пустым</div>
+         <button class="clear btn" onclick="clearForm()">Очистить</button>
+         <p>Описание:</p>
+         <textarea rows="5" id="desc" autocomplete="off" placeholder="Зачем? Как? И почему?"></textarea>
+         <br>
+         <button onclick="addTask()" class="addTaskBtn btn">Добавить Дело</button>
+      </form>
+   </div>
    <hr>
    <div id="taskList"></div>
 </body>
