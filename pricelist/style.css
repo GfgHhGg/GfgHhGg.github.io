@@ -1,0 +1,225 @@
+/* Get Fonts */
+@font-face {
+   src: url(fonts/Circe-Bold.ttf);
+   font-family: Circe-Bold;
+}
+
+@font-face {
+   src: url(fonts/Circe-ExtraBold.ttf);
+   font-family: Circe-ExtraBold;
+}
+
+@font-face {
+   src: url(fonts/Circe-Regular.ttf);
+   font-family: Circe-Regular;
+}
+
+@font-face {
+   src: url(fonts/RUBSN.otf);
+   font-family: RUB;
+}
+
+/* Get Fonts */
+/* Page */
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.conteiner {
+   display: block;
+   width: 1145px;
+   margin: 0 auto;
+}
+
+.getTick__title {
+   display: block;
+   font-family: Circe-Bold;
+   font-size: 48px;
+   color: rgb(14, 44, 0);
+   line-height: 1.25;
+   text-align: center;
+   max-width: 780px;
+   margin: 0 auto;
+   margin-top: 20px;
+}
+
+.price-list {
+   display: flex;
+   justify-content: space-between;
+   padding-top: 50px;
+}
+
+.consist {
+   display: inline-block;
+   font-family: Circe-Regular;
+   font-size: 19px;
+   color: rgb(44, 44, 44);
+   margin-top: 145px;
+}
+
+.consist__title {
+   font-family: Circe-Bold;
+   font-size: 21px;
+   margin-bottom: 37px;
+}
+
+.consist__dlc {
+   display: block;
+   position: relative;
+   margin-bottom: 31px;
+   line-height: 1.45;
+}
+
+.consist__dlc::after {
+   content: '';
+   display: block;
+   background-color: rgb(235, 235, 235);
+   width: 1140px;
+   height: 1px;
+   position: absolute;
+   top: 42px;
+}
+
+.consist__dlc:nth-child(8)::after,
+.consist__dlc:nth-child(9)::after {
+   top: 68px;
+}
+
+.items {
+   display: flex;
+   justify-content: space-between;
+   width: 875px;
+}
+
+.item {
+   width: 100%;
+   padding-top: 23px;
+   padding-bottom: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   transition: all .2s;
+}
+
+.item:hover {
+   box-shadow: 0px 0px 49px 0px rgba(33, 29, 30, 0.07);
+}
+
+.item__icon {
+   width: 97px;
+   height: 98px;
+   text-align: center;
+   line-height: 135px;
+   border-radius: 50%;
+}
+
+.item:nth-child(1) .item__icon {
+   background-color: rgb(119, 137, 216);
+}
+
+.item:nth-child(2) .item__icon {
+   background-color: rgb(150, 202, 0);
+}
+
+.item:nth-child(3) .item__icon {
+   background-color: rgb(255, 143, 177);
+}
+
+.item__title {
+   font-family: Circe-ExtraBold;
+   font-size: 28px;
+   margin-top: 15px;
+   margin-bottom: 31px;
+}
+
+.item__dlc-places {
+   font-family: Circe-Regular;
+   font-size: 19px;
+   margin-bottom: 41px;
+}
+
+.item:nth-child(1) .item__dlc-places {
+   color: rgb(119, 137, 216);
+}
+
+.item:nth-child(2) .item__dlc-places {
+   color: rgb(150, 202, 0);
+}
+
+.item:nth-child(3) .item__dlc-places {
+   color: rgb(255, 143, 177);
+}
+
+.item__dlc-description {
+   border-radius: 50%;
+   background-color: rgb(119, 137, 216);
+   width: 14px;
+   height: 14px;
+   margin-bottom: 44px;
+}
+
+.item:nth-child(1) .item__dlc-description {
+   background-color: rgb(119, 137, 216);
+}
+
+.item:nth-child(2) .item__dlc-description {
+   background-color: rgb(150, 202, 0);
+}
+
+.item:nth-child(3) .item__dlc-description {
+   background-color: rgb(255, 143, 177);
+}
+
+.item__dlc-description:nth-child(8) {
+   margin-bottom: 57px;
+}
+
+.item__dlc-description:nth-child(9) {
+   margin-bottom: 71px;
+}
+
+.item__dlc-description:nth-child(10) {
+   margin-bottom: 57px;
+}
+
+.none {
+   background-color: rgb(235, 235, 235) !important;
+}
+
+.price {
+   font-family: Circe-ExtraBold;
+   font-size: 30px;
+}
+
+.rub {
+   font-family: RUB;
+   font-size: 30px;
+}
+
+.buy-ticket {
+   font-family: Circe-Bold;
+   font-size: 24px;
+   color: #fff;
+   width: 168px;
+   height: 59px;
+   border-radius: 100px;
+   text-align: center;
+   line-height: 59px;
+   margin-top: 15px;
+}
+
+.item:nth-child(1) .buy-ticket {
+   background-color: rgb(119, 137, 216);
+}
+
+.item:nth-child(2) .buy-ticket {
+   background-color: rgb(150, 202, 0);
+}
+
+.item:nth-child(3) .buy-ticket {
+   background-color: rgb(255, 143, 177);
+}
+
+ 
+ 
