@@ -73,6 +73,8 @@
    float: left;
    padding: 70px 0px 90px 97px;
    width: 570px;
+   height: 818px;
+   box-shadow: 10px 0px 29px 0px rgba(0, 62, 133, 0.1);
 }
 
 .account-block {
@@ -260,6 +262,16 @@ input[type=checkbox]:checked+.chb-lab .chb-sim img {
    padding: 27px 0 0 30px;
    margin: 0 auto;
    margin-top: 60px;
+
+   position: relative;
+}
+
+.result-block::before {
+   content: url(img/threeangle.png);
+   display: inline-block;
+   position: absolute;
+   top: 44px;
+   left: -90px;
 }
 
 .result-wrp {
@@ -298,3 +310,4 @@ input[type=checkbox]:checked+.chb-lab .chb-sim img {
 .buy-btn:hover {
    background-color: rgb(255, 82, 123);
 }
+
