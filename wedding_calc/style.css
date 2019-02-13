@@ -32,6 +32,7 @@
 .calc-section {
    height: 1205px;
    background-color: rgb(253, 253, 253);
+   padding-top: 89px;
 }
 
 .container {
@@ -42,6 +43,7 @@
 .title {
    display: block;
    font-size: 47px;
+   color: rgb(39, 70, 81);
    max-width: 660px;
    margin: 0 auto;
    line-height: 1.167;
@@ -51,7 +53,6 @@
    -ms-transform: matrix(1.28190963143785, 0, 0, 1.27044115190991, 0, 0);
    font-family: PTSerif;
    text-align: center;
-   margin-top: 89px;
 }
 
 .pig {
@@ -121,6 +122,11 @@
    line-height: 45px;
    border-radius: 100px;
    margin-left: 10px;
+   transition: all .3s;
+}
+
+#vis-text:focus {
+   border-color: rgb(255, 107, 141);
 }
 
 #vis-text::-webkit-outer-spin-button,
@@ -135,9 +141,9 @@
    font-size: 14px;
    font-family: PTSansRegular;
    color: rgb(39, 70, 81);
-   width: 264px;
+   width: 259px;
    justify-content: space-between;
-   margin-top: -8px;
+   margin-left: 2px;
 }
 
 .radio-wrp {
@@ -257,7 +263,8 @@ input[type=checkbox]:checked+.chb-lab .chb-sim img {
 }
 
 .result-wrp {
-   font-size: 32px;
+   font-family: PTSerif;
+   font-size: 56px;
 }
 
 #result {
