@@ -13,7 +13,11 @@ function printResult(res) {
    res += "";
    res = new Array(4 - res.length % 3).join("U") + res;
    res = res.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
-   resultOut.innerHTML = "≈" + res.replace(' ', '');
+   if ( (res.length - 1) % 4 == 0) {
+      resultOut.innerHTML = "≈" + res.replace(' ', '');
+   } else {
+      resultOut.innerHTML = "≈" + res;
+   }
 }
 
 rng.oninput = function () {
