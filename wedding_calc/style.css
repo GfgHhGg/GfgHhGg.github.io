@@ -253,7 +253,7 @@ input[type=checkbox]:checked+.chb-lab .chb-sim img {
    color: rgb(39, 70, 81);
 
    border-width: 2px;
-   border: 5px solid rgb(231, 238, 246);
+   border: 2px solid rgb(231, 238, 246);
    border-radius: 5px;
    width: 421px;
    height: 157px;
