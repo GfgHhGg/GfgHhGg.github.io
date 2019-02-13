@@ -94,13 +94,14 @@
 
 #vis-range {
    cursor: pointer;
-   appearance: none;
    -webkit-appearance: none;
+   -moz-appearance: none;
    width: 260px;
    height: 7px;
    outline: none;
    border-radius: 100px;
    background: -webkit-linear-gradient(left, rgb(255, 107, 141) 0%, rgb(255, 107, 141) 40%, rgb(231, 238, 246) 40%, rgb(231, 238, 246) 100%);
+   background: -moz-linear-gradient(left, rgb(255, 107, 141) 0%, rgb(255, 107, 141) 40%, rgb(231, 238, 246) 40%, rgb(231, 238, 246) 100%);
 }
 
 #vis-range::-webkit-slider-thumb {
@@ -112,6 +113,18 @@
    box-shadow: 0px 1px 10px 0px rgba(0, 62, 133, 0.23);
    border: 8px solid #fff;
 }
+
+#vis-range::-moz-range-thumb {
+   -moz-appearance: none;
+   box-sizing: border-box;
+   height: 30px;
+   width: 30px;
+   background-color: rgb(255, 107, 141);
+   border-radius: 50%;
+   box-shadow: 0px 1px 10px 0px rgba(0, 62, 133, 0.23);
+   border: 8px solid #fff;
+}
+
 
 #vis-text {
    outline: none;
@@ -125,18 +138,12 @@
    line-height: 45px;
    border-radius: 100px;
    margin-left: 10px;
+   -moz-appearance: textfield;
    transition: all .3s;
 }
 
 #vis-text:focus {
    border-color: rgb(255, 107, 141);
-}
-
-#vis-text::-webkit-outer-spin-button,
-#vis-text::-webkit-inner-spin-button {
-   -webkit-appearance: none;
-   display: none;
-   margin: 0;
 }
 
 .rngnum-wrp {

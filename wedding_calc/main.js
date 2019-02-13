@@ -4,6 +4,14 @@ let shift = 40;
 let result = 300000;
 let locRng = result;
 
+rngInp.onkeydown = function (event) {
+   if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+   }
+}
+
 function drowLine() {
    shift = (rng.value - 50) * 100 / 250;
    rng.style.background = "-webkit-linear-gradient(left,rgb(255, 107, 141) 0%,rgb(255, 107, 141) " + shift + "% ,rgb(231, 238, 246) " + shift + "% ,rgb(231, 238, 246) 100%)";
@@ -13,7 +21,7 @@ function printResult(res) {
    res += "";
    res = new Array(4 - res.length % 3).join("U") + res;
    res = res.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
-   if ( (res.length - 1) % 4 == 0) {
+   if ((res.length - 1) % 4 == 0) {
       resultOut.innerHTML = "≈" + res.replace(' ', '');
    } else {
       resultOut.innerHTML = "≈" + res;
@@ -32,18 +40,19 @@ rng.oninput = function () {
    locRng = rng.value * 2000;
 };
 
-rngInp.oninput = function () {
-   if (rngInp.value >= 50 && rngInp.value <= 300) {
-      rng.value = rngInp.value;
-      if (rng.value * 2000 > locRng) {
-         result += rng.value * 2000 - locRng;
-      } else {
-         result -= locRng - rng.value * 2000;
-      }
-      locRng = rng.value * 2000;
-      printResult(result);
-      drowLine();
-   }
+rngInp.oninput = function (e) {
+   // if (rngInp.value >= 50 && rngInp.value <= 300) {
+   //    rng.value = rngInp.value;
+   //    if (rng.value * 2000 > locRng) {
+   //       result += rng.value * 2000 - locRng;
+   //    } else {
+   //       result -= locRng - rng.value * 2000;
+   //    }
+   //    locRng = rng.value * 2000;
+   //    printResult(result);
+   //    drowLine();
+   // }
+   e.preventDefault();
 };
 
 rngInp.onchange = function () {
