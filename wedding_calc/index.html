@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="reset.css">
+   <link rel="stylesheet" href="style.css">
+   <script src="main.js" defer></script>
+   <title>Site calc</title>
+</head>
+
+<body>
+   <section class="calc-section">
+      <div class="container">
+         <h2 class="title">
+            <span class="pig">Рассчитайте</span> стоимость
+            Вашей идеальной свадьбы
+         </h2>
+         <div class="calc">
+            <div class="account_section">
+               <div>
+                  <p class="acc__title">
+                     Количество гостей на свадьбе
+                  </p>
+                  <div class="vis-wrp"></div>
+                  <input type="range" id="vis-range" min="50" max="300" value="150">
+                  <input type="number" id="vis-text" value="150">
+                  <div class="rngnum-wrp">
+                     <p>50</p>
+                     <p>300</p>
+                  </div>
+               </div>
+               <div class="account-block">
+                  <p class="acc__title">
+                     Нужно ли флористическое оформление?
+                  </p>
+                  <div class="radio-wrp">
+                     <input type="radio" name="florist__radio" id="florist-yes" class="radioFlor" value="60000">
+                     <label class="radio-lab" for="florist-yes">Да</label>
+                     <input type="radio" name="florist__radio" id="florist-no" class="radioFlor" value="no" checked>
+                     <label class="radio-lab" for="florist-no">Нет</label>
+                  </div>
+               </div>
+               <div class="account-block">
+                  <p class="acc__title">
+                     Планируется ли выездная регистрация?
+                  </p>
+                  <div class="radio-wrp">
+                     <input type="radio" name="regist__radio" id="regist-yes" class="radioReg" value="100000">
+                     <label class="radio-lab" for="regist-yes">Да</label>
+                     <input type="radio" name="regist__radio" id="regist-no" class="radioReg" value="no" checked>
+                     <label class="radio-lab" for="regist-no">Нет</label>
+                  </div>
+               </div>
+               <div class="account-block">
+                  <p class="acc__title">
+                     Выберите необходимые Вам опции
+                  </p>
+                  <div class="chb-wrap">
+                     <input type="checkbox" name="options" id="chb1" value="30000">
+                     <label for="chb1" class="chb-lab">
+                        <span class="chb-sim"><img src="img/tick-sign.svg"></span>
+                        фотограф
+                     </label>
+                     <input type="checkbox" name="options" id="chb2" value="40000">
+                     <label for="chb2" class="chb-lab">
+                        <span class="chb-sim"><img src="img/tick-sign.svg"></span>
+                        платье невесты под заказ
+                     </label>
+                     <input type="checkbox" name="options" id="chb3" value="200000">
+                     <label for="chb3" class="chb-lab">
+                        <span class="chb-sim"><img src="img/tick-sign.svg"></span>
+                        платья подружкам невесты под заказ
+                     </label>
+                     <input type="checkbox" name="options" id="chb4" value="150000">
+                     <label for="chb4" class="chb-lab">
+                        <span class="chb-sim"><img src="img/tick-sign.svg"></span>
+                        аренда помещения
+                     </label>
+                     <input type="checkbox" name="options" id="chb5" value="70000">
+                     <label for="chb5" class="chb-lab">
+                        <span class="chb-sim"><img src="img/tick-sign.svg"></span>
+                        развлекательная программа
+                     </label>
+                     <input type="checkbox" name="options" id="chb6" value="20000">
+                     <label for="chb6" class="chb-lab">
+                        <span class="chb-sim"><img src="img/tick-sign.svg"></span>
+                        фаер шоу
+                     </label>
+                     <input type="checkbox" name="options" id="chb7" value="50000">
+                     <label for="chb7" class="chb-lab">
+                        <span class="chb-sim"><img src="img/tick-sign.svg"></span>
+                        вегетарианское меню
+                     </label>
+                  </div>
+               </div>
+            </div>
+            <div class="decor_section">
+               <img src="img/decor.png" alt="">
+            </div>
+            <div class="result-section">
+               <div class="result-block">
+                  <p>Приблизительная стоимость:</p>
+                  <p class="result-wrp"><span id="result">~300 000</span> руб</p> 
+               </div>
+               <div class="buy-btn">
+                  Хочу идеальную свадьбу
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</body>
+
+</html>
