@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="css/fonts.css">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous" defer></script>
+   <script src="script.js" defer></script>
+   <title>Document</title>
+</head>
+
+<body>
+   <header>
+      <div class="container">
+         <div class="header__top">
+            <div class="top__info">
+               <p class="info__date">2 марта 2019, пн</p>
+               <div class="info__wrp">
+                  <p class="info__temp">–11°</p>
+                  <p class="info__predict">
+                     Утром −7, <br>
+                     днём 0
+                  </p>
+               </div>
+            </div>
+            <img src="img/top__logo.png" class="top__logo">
+            <div class="top__poorvision">
+               <a href="#" class="poorvision__svg"></a>
+               <a href="#" >Версия для слабовидящих</a>
+            </div>
+         </div>
+         <nav class="header__nav">
+            <ul class="nav__ul">
+               <li class="nav__item">
+                  новости
+                  <div class="nav__item-line"></div>
+               </li>
+               <li class="nav__item">
+                  об учруждении
+                  <div class="nav__item-line"></div>
+                  <ul class="nav__ul-inner nav__ul-first">
+                     <li class="nav__item-inner">общая информация</li>
+                     <li class="nav__item-inner">история учреждения</li>
+                     <li class="nav__item-inner">
+                        Документы
+                        <ul class="nav__ul-inner nav__ul-second">
+                           <li class="nav__item-inner">реквизиты</li>
+                           <li class="nav__item-inner">устав</li>
+                           <li class="nav__item-inner">лицензия</li>
+                           <li class="nav__item-inner">
+                              сертификаты
+                              <ul class="nav__ul-inner nav__ul-second">
+                                 <li class="nav__item-inner">реквизиты</li>
+                                 <li class="nav__item-inner">устав</li>
+                                 <li class="nav__item-inner">лицензия</li>
+                                 <li class="nav__item-inner">сертификаты</li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="nav__item-inner">календарь соревнований</li>
+                     <li class="nav__item-inner">маршруты движения</li>
+                     <li class="nav__item-inner">благодарственные письма</li>
+                     <li class="nav__item-inner">прием граждан</li>
+                  </ul>
+               </li>
+               <li class="nav__item">
+                  запись детей
+                  <div class="nav__item-line"></div>
+               </li>
+               <li class="nav__item">
+                  направление
+                  <div class="nav__item-line"></div>
+                  <ul class="nav__ul-inner nav__ul-first">
+                     <li class="nav__item-inner">общая информация</li>
+                     <li class="nav__item-inner">история учреждения</li>
+                     <li class="nav__item-inner">
+                        Документы
+                        <ul class="nav__ul-inner nav__ul-second">
+                           <li class="nav__item-inner">реквизиты</li>
+                           <li class="nav__item-inner">устав</li>
+                           <li class="nav__item-inner">лицензия</li>
+                           <li class="nav__item-inner">
+                              сертификаты
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="nav__item-inner">календарь соревнований</li>
+                     <li class="nav__item-inner">маршруты движения</li>
+                     <li class="nav__item-inner">благодарственные письма</li>
+                     <li class="nav__item-inner">прием граждан</li>
+                  </ul>
+               </li>
+               <li class="nav__item">
+                  платные услуги
+                  <div class="nav__item-line"></div>
+               </li>
+               <li class="nav__item">
+                  контакты
+                  <div class="nav__item-line"></div>
+               </li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+   <section class="slider-section">
+      <div class="container">
+         <div class="mainnew-wrp">
+            <div class="mainnew">
+               <p class="mainnew__date">4 февраля</p>
+               <h2 class="mainnew__title">
+                  Положение <br>
+                  о проведении открытых<br>
+                  региональных<br>
+                  соревнований
+               </h2>
+               <a href="#" class="mainnew__detail-link">
+                  Подробнее
+                  <span class="arrow-icon mainnew__icon"></span>
+               </a>
+            </div>
+            <div class="mainnew mainnew-blue">
+               <p class="mainnew__date">16 марта</p>
+               <h2 class="mainnew__title">
+                  Межрегиональные
+                  соревнования по легкой
+                  атлетике
+               </h2>
+               <div class="mainnew__btn">
+                  <a href="#" class="mainnew__detail-link">
+                     Подробнее
+                     <span class="arrow-icon mainnew__icon"></span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="slider">
+         <div class="slider__gradient"></div>
+         <span class="slider__left"></span>
+         <span class="slider__right"></span>
+         <div class="slider__bar" id="sliderLastClone">
+            <div class="slider__item" style="background: url(img/3slide.jpg)  no-repeat 0 -100px / cover;">
+               <div class="container">
+                  <h2 class="slider__title">
+                     Соревнования 3<br>
+                     в День защитника отечества
+                  </h2>
+                  <a href="#" class="slider__detail-link">
+                     Подробнее
+                     <span class="arrow-icon slider__icon"></span>
+                  </a>
+               </div>
+            </div>
+            <div class="slider__item" style="background: url(img/1slide.jpg)  no-repeat 0 -100px / cover;">
+               <div class="container">
+                  <h2 class="slider__title">
+                     Соревнования <br>
+                     в День защитника отечества
+                  </h2>
+                  <a href="#" class="slider__detail-link">
+                     Подробнее
+                     <span class="arrow-icon slider__icon"></span>
+                  </a>
+               </div>
+            </div>
+            <div class="slider__item" style="background: url(img/2slide.jpg)  no-repeat 0 0 / cover;">
+               <div class="container">
+                  <h2 class="slider__title">
+                     Соревнования 2<br>
+                     в День защитника отечества
+                  </h2>
+                  <a href="#" class="slider__detail-link">
+                     Подробнее
+                     <span class="arrow-icon slider__icon"></span>
+                  </a>
+               </div>
+            </div>
+            <div class="slider__item" style="background: url(img/3slide.jpg)  no-repeat 0 -100px / cover;">
+               <div class="container">
+                  <h2 class="slider__title">
+                     Соревнования 3<br>
+                     в День защитника отечества
+                  </h2>
+                  <a href="#" class="slider__detail-link">
+                     Подробнее
+                     <span class="arrow-icon slider__icon"></span>
+                  </a>
+               </div>
+            </div>
+            <div class="slider__item" id="sliderFirstClone" style="background: url(img/1slide.jpg)  no-repeat 0 -100px / cover;">
+               <div class="container">
+                  <h2 class="slider__title">
+                     Соревнования <br>
+                     в День защитника отечества
+                  </h2>
+                  <a href="#" class="slider__detail-link">
+                     Подробнее
+                     <span class="arrow-icon slider__icon"></span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section>
+      <div class="container">
+         <div class="news-setion">
+            <div class="news-feed">
+               <div class="new-block">
+                  <img src="img/newimg/1.jpg" alt="" class="new-block__img">
+                  <div class="new-block__main">
+                     <h3 class="new-block__title">
+                        Межрегиональные соревнования
+                        по легкой атлетике
+                     </h3>
+                     <p class="new-block__date">21 февраля 2019</p>
+                     <p class="new-block__text">
+                        В последний день января в г. Новосибирске состоялись
+                        межрегиональные открытые соревнования по лёгкой атлетике
+                        «Кубок Валерия Стародубцева».
+                     </p>
+                     <a href="#" class="new-block__link">
+                        Читать <span class="new-block__icon"></span>
+                     </a>
+                  </div>
+               </div>
+
+
+               <div class="new-block">
+                  <img src="img/newimg/2.jpg" alt="" class="new-block__img">
+                  <div class="new-block__main">
+                     <h3 class="new-block__title">
+                        Первенство России среди юниоров
+                        до 20 лет
+                     </h3>
+                     <p class="new-block__date">21 февраля 2019</p>
+                     <p class="new-block__text">
+                        С 5 по 7 февраля в г.Смоленске стартовало национальное
+                        первенство среди юниоров и юниорок до 20 лет.
+                     </p>
+                     <a href="#" class="new-block__link">
+                        Читать <span class="new-block__icon"></span>
+                     </a>
+                  </div>
+               </div>
+
+
+               <div class="new-block">
+                  <img src="img/newimg/3.jpg" alt="" class="new-block__img">
+                  <div class="new-block__main">
+                     <h3 class="new-block__title">
+                        Рождественский турнир по мини-футболу
+                     </h3>
+                     <p class="new-block__date">21 февраля 2019</p>
+                     <p class="new-block__text">
+                        13.01.2019 в с/к «Янтарь» прошел «Рождественский турнир»
+                        по мини-футболу среди групп тренера-преподавателя СДЮСШОР
+                        «Лидер» Алексея Владимировича Максимовича. В турнире
+                        участвовали дети в возрасте от 6 до 8 лет. Между командами
+                        Гладиатор, Воин, Боец и Легион прошли товарищеские игры
+                        в которых принимали участие и родители юных воспитанников
+                        отделения футбола. В процессе турнира его участники получили
+                        бурю положительных эмоций, отличного настроения и улыбок.
+                        А юные дарования футбола были награждены сладкими
+                        подарками и ценными призами.
+                     </p>
+                     <a href="#" class="new-block__link">
+                        Читать <span class="new-block__icon"></span>
+                     </a>
+                  </div>
+               </div>
+               <div class="new-block">
+                  <img src="img/newimg/1.jpg" alt="" class="new-block__img">
+                  <div class="new-block__main">
+                     <h3 class="new-block__title">
+                        Межрегиональные соревнования
+                        по легкой атлетике
+                     </h3>
+                     <p class="new-block__date">21 февраля 2019</p>
+                     <p class="new-block__text">
+                        В последний день января в г. Новосибирске состоялись
+                        межрегиональные открытые соревнования по лёгкой атлетике
+                        «Кубок Валерия Стародубцева».
+                     </p>
+                     <a href="#" class="new-block__link">
+                        Читать <span class="new-block__icon"></span>
+                     </a>
+                  </div>
+               </div>
+
+
+               <div class="new-block">
+                  <img src="img/newimg/2.jpg" alt="" class="new-block__img">
+                  <div class="new-block__main">
+                     <h3 class="new-block__title">
+                        Первенство России среди юниоров
+                        до 20 лет
+                     </h3>
+                     <p class="new-block__date">21 февраля 2019</p>
+                     <p class="new-block__text">
+                        С 5 по 7 февраля в г.Смоленске стартовало национальное
+                        первенство среди юниоров и юниорок до 20 лет.
+                     </p>
+                     <a href="#" class="new-block__link">
+                        Читать <span class="new-block__icon"></span>
+                     </a>
+                  </div>
+               </div>
+
+
+               <div class="new-block">
+                  <img src="img/newimg/3.jpg" alt="" class="new-block__img">
+                  <div class="new-block__main">
+                     <h3 class="new-block__title">
+                        Рождественский турнир по мини-футболу
+                     </h3>
+                     <p class="new-block__date">21 февраля 2019</p>
+                     <p class="new-block__text">
+                        13.01.2019 в с/к «Янтарь» прошел «Рождественский турнир»
+                        по мини-футболу среди групп тренера-преподавателя СДЮСШОР
+                        «Лидер» Алексея Владимировича Максимовича. В турнире
+                        участвовали дети в возрасте от 6 до 8 лет. Между командами
+                        Гладиатор, Воин, Боец и Легион прошли товарищеские игры
+                        в которых принимали участие и родители юных воспитанников
+                        отделения футбола. В процессе турнира его участники получили
+                        бурю положительных эмоций, отличного настроения и улыбок.
+                        А юные дарования футбола были награждены сладкими
+                        подарками и ценными призами.
+                     </p>
+                     <a href="#" class="new-block__link">
+                        Читать <span class="new-block__icon"></span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="sidebar">
+               <div class="sidebar__item"></div>
+               <div class="sidebar__item"></div>
+               <div class="sidebar__item"></div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <footer>
+      <p>© МБОУ ЗАТО Северск МБУДО СДЮСШОР «Лидер»</p>
+   </footer>
+</body>
+
+</html>
