@@ -7,18 +7,6 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
    <style>
-      button {
-         font-size: 40px;
-         border: none;
-         outline: none;
-         margin: 20px;
-         margin-bottom: 5px;
-      }
-
-      .btn-wrp {
-         text-align: center;
-         display: none;
-      }
       #canvas {
          display: block;
          transform: scale(1.8, 1.8);
@@ -33,22 +21,6 @@
          font-size: 40px;
          line-height: .1em;
       }
-
-      @media(max-width: 470px) {
-         #canvas {
-            transform: scale(1, 1);
-            margin-top: 0;
-         }
-         .scoreBlock {
-            margin-top: 20px;
-         }
-         .scoreBlock-text {
-            display: none;
-         }
-         .btn-wrp {
-            display: block;
-         }
-      }
    </style>
    <script src="script.js" defer></script>
    <title>Tetris</title>
@@ -56,14 +28,8 @@
 
 <body>
    <canvas id="canvas" width="240" height="400"></canvas>
-   <div class="btn-wrp">
-      <button id="left">Left</button>
-      <button id="right">Right</button>
-      <button id="down">Down</button>
-      <button id="flip">Flip</button>
-   </div>
    <div class="scoreBlock">
-      <p class="scoreBlock-text">Your score:</p>
+      Your score:
       <p id="score"></p>
    </div>
 </body>
