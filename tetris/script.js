@@ -1,6 +1,10 @@
 const cnv = document.getElementById("canvas"),
    ctx = cnv.getContext("2d"),
-   scoreBlock = document.getElementById('score');
+   scoreBlock = document.getElementById('score'),
+   leftBtn = document.getElementById('left'),
+   rightBtn = document.getElementById('right'),
+   flipBtn = document.getElementById('flip'),
+   downBtn = document.getElementById('down');
 
 ctx.scale(20, 20);
 
@@ -16,7 +20,6 @@ function arenaSweep() {
          }
       }
       const row = arena.splice(y, 1)[0].fill(0);
-      console.log(row);
       arena.unshift(row);
       y++;
       player.score += rowCounter;
@@ -233,6 +236,22 @@ const player = {
    },
    matrix: null,
    score: 0,
+}
+
+leftBtn.onclick = () => {
+   playerMove(-1);
+}
+
+rightBtn.onclick = () => {
+   playerMove(1);
+}
+
+flipBtn.onclick = () => {
+   playerRotate(true);
+}
+
+downBtn.onclick = () => {
+   playerDrop();
 }
 
 document.addEventListener('keydown', e => {

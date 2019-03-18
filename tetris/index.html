@@ -3,20 +3,48 @@
 
 <head>
    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
    <style>
+      button {
+         font-size: 40px;
+         border: none;
+         outline: none;
+         margin: 20px;
+         margin-bottom: 5px;
+      }
+
+      .btn-wrp {
+         text-align: center;
+
+      }
       #canvas {
          display: block;
          transform: scale(1.8, 1.8);
          margin: 0 auto;
          margin-top: 160px;
       }
+
       .scoreBlock {
          margin-top: 200px;
          text-align: center;
          font-family: 'Staatliches', cursive;
          font-size: 40px;
          line-height: .1em;
+      }
+
+      @media(max-width: 470px) {
+         #canvas {
+            transform: scale(1, 1);
+            margin-top: 0;
+         }
+         .scoreBlock {
+            margin-top: 20px;
+         }
+         .scoreBlock-text {
+            display: none;
+         }
       }
    </style>
    <script src="script.js" defer></script>
@@ -25,8 +53,14 @@
 
 <body>
    <canvas id="canvas" width="240" height="400"></canvas>
+   <div class="btn-wrp">
+      <button id="left">Left</button>
+      <button id="right">Right</button>
+      <button id="down">Down</button>
+      <button id="flip">Flip</button>
+   </div>
    <div class="scoreBlock">
-      Your score: 
+      <p class="scoreBlock-text">Your score:</p>
       <p id="score"></p>
    </div>
 </body>
