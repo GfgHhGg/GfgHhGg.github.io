@@ -1,10 +1,10 @@
+alert('Press D for right flip');
+alert('Press A for left flip');
+alert('Press arrows for everything else');
+
 const cnv = document.getElementById("canvas"),
    ctx = cnv.getContext("2d"),
-   scoreBlock = document.getElementById('score'),
-   leftBtn = document.getElementById('left'),
-   rightBtn = document.getElementById('right'),
-   flipBtn = document.getElementById('flip'),
-   downBtn = document.getElementById('down');
+   scoreBlock = document.getElementById('score');
 
 ctx.scale(20, 20);
 
@@ -236,22 +236,6 @@ const player = {
    },
    matrix: null,
    score: 0,
-}
-
-leftBtn.onclick = () => {
-   playerMove(-1);
-}
-
-rightBtn.onclick = () => {
-   playerMove(1);
-}
-
-flipBtn.onclick = () => {
-   playerRotate(true);
-}
-
-downBtn.onclick = () => {
-   playerDrop();
 }
 
 document.addEventListener('keydown', e => {
