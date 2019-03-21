@@ -9,7 +9,7 @@
       body {
          font-family: 'Staatliches', cursive;
          font-size: 40px;
-         background-color: rgb(125, 226, 42);
+         background-color: rgb(97, 211, 219);
          height: 100vh;
          margin: 0;
          display: flex;
@@ -18,7 +18,7 @@
 
       .main {
          display: flex;
-         width: 75vw;
+         width: 980px;
          margin: 0 auto;
          justify-content: space-between;
       }
@@ -33,10 +33,8 @@
       .scoreBlock {
          text-align: center;
          line-height: .1em;
-         margin-top: 80px;
+         margin-top: 70px;
       }
-
-      #nextPiece {}
    </style>
    <script src="script.js" defer></script>
    <title>Tetris</title>
@@ -49,7 +47,11 @@
          <canvas id="nextPiece" width="400" height="400"></canvas>
          <div class="scoreBlock">
             Your score:
-            <p id="score"></p>
+            <p id="score">0</p>
+         </div>
+         <div class="scoreBlock">
+            Last score:
+            <p id="lastScore">0</p>
          </div>
          <div class="scoreBlock">
             Best score:

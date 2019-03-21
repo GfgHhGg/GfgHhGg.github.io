@@ -11,6 +11,7 @@ const cnv = document.getElementById("canvas");
 const ctx = cnv.getContext("2d");
 
 const scoreBlock = document.getElementById('score');
+const lastScoreBlock = document.getElementById('lastScore');
 
 ctx.scale(20, 20);
 
@@ -29,6 +30,7 @@ function arenaSweep() {
       arena.unshift(row);
       y++;
       player.score += rowCounter;
+      updateScore();
       checkBestScore();
       rowCounter * 2;
    }
@@ -168,7 +170,6 @@ function playerDrop() {
       merge(arena, player);
       playerReset();
       arenaSweep();
-      updateScore();
    }
    dropCounter = 0;
 }
@@ -186,9 +187,10 @@ function playerReset() {
    player.pos.x = (arena[0].length / 2 | 0) - (player.matrix[0].length / 2 | 0);
    if (collide(arena, player)) {
       if (player.score > bestRes) {
-         bestRes = player.score;
+         bestRes = player.score * 20;
          localStorage.setItem('bestscore', bestRes);
       }
+      lastScoreBlock.innerHTML = player.score * 10;
       arena.forEach(row => row.fill(0));
       player.score = 0;
       updateScore();
@@ -258,6 +260,7 @@ function updateScore() {
    scoreBlock.innerHTML = player.score * 10;
    if (player.score % 5 === 0 && player.score) {
       dropInterval -= dropInterval / 10;
+      console.log(dropInterval);
    }
 }
 
