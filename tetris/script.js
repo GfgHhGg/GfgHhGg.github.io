@@ -114,7 +114,7 @@ const ctxNext = cnvNext.getContext("2d");
 
 ctxNext.fillStyle = '#000';
 ctxNext.fillRect(0, 0, cnvNext.width, cnvNext.height);
-ctxNext.scale(60, 60);
+ctxNext.scale(50, 50);
 
 function createPieces() {
    nowPieces = nextPieces;
@@ -124,8 +124,8 @@ function createPieces() {
    ctxNext.fillRect(0, 0, cnvNext.width, cnvNext.height);
 
    drawMatrix(nextPieces, {
-      x: 1.6,
-      y: 2
+      x: cnvNext.width / 50 / 2 - nextPieces.length / 2,
+      y: cnvNext.height / 50 / 2 - nextPieces.length / 2
    }, ctxNext);
 
    return nowPieces;
