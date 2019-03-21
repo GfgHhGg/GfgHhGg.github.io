@@ -1,10 +1,16 @@
-alert('Press D for right flip');
-alert('Press A for left flip');
-alert('Press arrows for everything else');
+const bestScoreBlock = document.getElementById('bestScore');
+let bestRes = localStorage.getItem("bestscore");
+if (bestRes != null) {
+   bestScoreBlock.innerHTML = bestRes * 10;
+} else {
+   bestRes = -1;
+}
 
-const cnv = document.getElementById("canvas"),
-   ctx = cnv.getContext("2d"),
-   scoreBlock = document.getElementById('score');
+
+const cnv = document.getElementById("canvas");
+const ctx = cnv.getContext("2d");
+
+const scoreBlock = document.getElementById('score');
 
 ctx.scale(20, 20);
 
@@ -23,6 +29,7 @@ function arenaSweep() {
       arena.unshift(row);
       y++;
       player.score += rowCounter;
+      checkBestScore();
       rowCounter * 2;
    }
 }
@@ -47,7 +54,9 @@ function createMatrix(w, h) {
    return matrix;
 }
 
-function createPieces(type) {
+function generatePieces() {
+   const pieces = 'ILJOTZS';
+   let type = pieces[pieces.length * Math.random() | 0];
    switch (type) {
       case 'T':
          return [
@@ -94,6 +103,32 @@ function createPieces(type) {
    }
 }
 
+let nowPieces = [];
+let nextPieces = generatePieces();
+
+
+const cnvNext = document.getElementById("nextPiece");
+const ctxNext = cnvNext.getContext("2d");
+
+ctxNext.fillStyle = '#000';
+ctxNext.fillRect(0, 0, cnvNext.width, cnvNext.height);
+ctxNext.scale(60, 60);
+
+function createPieces() {
+   nowPieces = nextPieces;
+   nextPieces = generatePieces();
+
+   ctxNext.fillStyle = '#000';
+   ctxNext.fillRect(0, 0, cnvNext.width, cnvNext.height);
+
+   drawMatrix(nextPieces, {
+      x: 1.6,
+      y: 2
+   }, ctxNext);
+
+   return nowPieces;
+}
+
 function draw() {
    ctx.fillStyle = "#000";
    ctx.fillRect(0, 0, cnv.width, cnv.height);
@@ -101,16 +136,16 @@ function draw() {
    drawMatrix(arena, {
       y: 0,
       x: 0
-   })
+   });
    drawMatrix(player.matrix, player.pos);
 }
 
-function drawMatrix(matrix, offset) {
+function drawMatrix(matrix, offset, context = ctx) {
    matrix.forEach((row, y) => {
       row.forEach((value, x) => {
          if (value !== 0) {
-            ctx.fillStyle = colors[value];
-            ctx.fillRect(x + offset.x, y + offset.y, 1, 1);
+            context.fillStyle = colors[value];
+            context.fillRect(x + offset.x, y + offset.y, 1, 1);
          }
       });
    });
@@ -146,11 +181,14 @@ function playerMove(d) {
 }
 
 function playerReset() {
-   const pieces = 'ILJOTZS';
-   player.matrix = createPieces(pieces[pieces.length * Math.random() | 0]);
+   player.matrix = createPieces();
    player.pos.y = 0;
    player.pos.x = (arena[0].length / 2 | 0) - (player.matrix[0].length / 2 | 0);
    if (collide(arena, player)) {
+      if (player.score > bestRes) {
+         bestRes = player.score;
+         localStorage.setItem('bestscore', bestRes);
+      }
       arena.forEach(row => row.fill(0));
       player.score = 0;
       updateScore();
@@ -208,6 +246,14 @@ function update(time = 0) {
    requestAnimationFrame(update);
 }
 
+function checkBestScore() {
+   if (player.score > bestRes) {
+      bestRes = player.score;
+      localStorage.setItem("bestscore", bestRes)
+      bestScoreBlock.innerHTML = bestRes * 10;
+   }
+}
+
 function updateScore() {
    scoreBlock.innerHTML = player.score * 10;
    if (player.score % 5 === 0 && player.score) {
@@ -227,7 +273,6 @@ const colors = [
 ];
 
 const arena = createMatrix(12, 20);
-
 
 const player = {
    pos: {

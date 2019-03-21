@@ -10,31 +10,51 @@
       body {
          font-family: 'Staatliches', cursive;
          font-size: 40px;
+         background-color: rgb(125, 226, 42);
+         padding: 0;
+         margin: 0;
+      }
+
+      .main {
+         display: flex;
+         width: 75vw;
+         margin: 0 auto;
+         justify-content: space-between;
       }
 
       #canvas {
          display: block;
-         transform: scale(2, 2);
-         margin: 0 auto;
-         margin-top: 200px;
+         width: 480px;
+         height: 800px;
          position: relative;
       }
 
       .scoreBlock {
-         margin-top: 220px;
          text-align: center;
          line-height: .1em;
+         margin-top: 80px;
       }
+
+      #nextPiece {}
    </style>
    <script src="script.js" defer></script>
    <title>Tetris</title>
 </head>
 
 <body>
-   <canvas id="canvas" width="240" height="400"></canvas>
-   <div class="scoreBlock">
-      Your score:
-      <p id="score"></p>
+   <div class="main">
+      <canvas id="canvas" width="240" height="400"></canvas>
+      <div class="wrp">
+         <canvas id="nextPiece" width="400" height="400"></canvas>
+         <div class="scoreBlock">
+            Your score:
+            <p id="score"></p>
+         </div>
+         <div class="scoreBlock">
+            Best score:
+            <p id="bestScore"></p>
+         </div>
+      </div>
    </div>
 </body>
 
