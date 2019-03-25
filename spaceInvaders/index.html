@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+   <style>
+      body {
+         margin: 0;
+         padding: 0;
+         background-color: #fff;
+         font-family: 'Staatliches', cursive;
+         line-height: .5em;
+      }
+
+      canvas {
+         display: block;
+         margin: 20px auto;
+      }
+      .info {
+         display: flex;
+         margin: 0 auto;
+         width: 950px;
+         justify-content: space-between;
+         text-align: center;
+         font-size: 30px;
+      }
+   </style>
+   <script src="script.js" defer></script>
+   <title>Space Invaders</title>
+</head>
+
+<body>
+   <canvas id="canvas" width="960" height="750"></canvas>
+   <div class="info">
+      <div>
+         Your score:
+         <p id="score">0</p>
+      </div>
+      <div>
+         Your lives:
+         <p id="lives">3</p>
+      </div>
+   </div>
+</body>
+
+</html>

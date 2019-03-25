@@ -21,7 +21,7 @@ ctx.fillRect(0, 0, cnv.width, cnv.height);
 function arenaSweep() {
    rowCounter = 1;
    outer: for (let y = arena.length - 1; y > 0; y--) {
-      for (let x = 0; x < arena[y].length - 1; x++) {
+      for (let x = 0; x < arena[y].length; x++) {
          if (arena[y][x] === 0) {
             continue outer;
          }
