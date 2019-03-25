@@ -170,6 +170,7 @@ function playerDrop() {
       merge(arena, player);
       playerReset();
       arenaSweep();
+      isDownArrow = false;
    }
    dropCounter = 0;
 }
@@ -235,14 +236,23 @@ function rotate(m, dir) {
 let dropCounter = 0;
 let dropInterval = 1000;
 
+let moveCounter;
+let moveInterval;
+
 let lastTime = 0;
 
 function update(time = 0) {
    const deltaTime = time - lastTime;
    lastTime = time;
    dropCounter += deltaTime;
-   if (dropCounter > dropInterval) {
-      playerDrop();
+   moveCounter += deltaTime;
+   if (dropCounter > dropInterval) playerDrop();
+   if (moveCounter > moveInterval) {
+      if (isLeftArrow) playerMove(-1);
+      if (isRightArrow) playerMove(1);
+      if (isDownArrow) playerDrop();
+      moveCounter = 0;
+      moveInterval = 30;
    }
    draw();
    requestAnimationFrame(update);
@@ -286,23 +296,56 @@ const player = {
    score: 0,
 }
 
+let isLeftArrow = false;
+let isRightArrow = false;
+let isDownArrow = false;
+
+let isKeyDown = false;
 document.addEventListener('keydown', e => {
-   const k = e.keyCode;
-   switch (k) {
+   if (!isKeyDown) {
+      switch (e.keyCode) {
+         case 37:
+            playerMove(-1)
+            isLeftArrow = true;
+            moveCounter = 0;
+            moveInterval = 250;
+            isKeyDown = true;
+            break;
+         case 39:
+            playerMove(1)
+            isRightArrow = true;
+            moveCounter = 0;
+            moveInterval = 250;
+            isKeyDown = true;
+            break;
+         case 40:
+            playerDrop()
+            isDownArrow = true;
+            moveCounter = 0;
+            moveInterval = 250;
+            isKeyDown = true;
+            break;
+         case 65:
+            playerRotate(true);
+            break;
+         case 68:
+            playerRotate(false);
+            break;
+      }
+   }
+});
+
+document.addEventListener('keyup', e => {
+   isKeyDown = false;
+   switch (e.keyCode) {
       case 37:
-         playerMove(-1);
+         isLeftArrow = false;
          break;
       case 39:
-         playerMove(1);
+         isRightArrow = false;
          break;
       case 40:
-         playerDrop();
-         break;
-      case 65:
-         playerRotate(true);
-         break;
-      case 68:
-         playerRotate(false);
+         isDownArrow = false;
          break;
    }
 });
