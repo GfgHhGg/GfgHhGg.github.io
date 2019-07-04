@@ -292,6 +292,13 @@ button{
     display:-webkit-box;
     display:flex; }
 
+.header__sign-link{
+    -webkit-transition:all 0.3s ease;
+    transition:all 0.3s ease; }
+
+.header__sign-link:hover{
+      color:#fff; }
+
 .header__sign-in{
     margin-right:30px; }
 
