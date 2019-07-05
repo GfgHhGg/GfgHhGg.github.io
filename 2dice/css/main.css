@@ -192,13 +192,13 @@ template{
 @font-face{
   font-family:'MES';
   src:url("../fonts/madeevolvesansmedium.ttf");
-  font-weight:medium;
+  font-weight:500;
   font-style:normal; }
 
 @font-face{
   font-family:'MESevo';
   src:url("../fonts/madeevolvesansevomedium.ttf");
-  font-weight:medium;
+  font-weight:500;
   font-style:normal; }
 
 @font-face{
@@ -263,6 +263,57 @@ button{
   margin:0 auto;
   padding:0 20px; }
 
+.page-content{
+  display:-webkit-box;
+  display:flex;
+  -webkit-box-pack:justify;
+  justify-content:space-between; }
+
+.counter{
+  width:300px; }
+
+.counter__btn{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    top:0;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align:center;
+    align-items:center;
+    position:absolute;
+    font-family:MESevo;
+    font-size:51px;
+    font-weight:500;
+    height:100%;
+    width:37px;
+    background-color:#015862;
+    cursor:pointer; }
+
+.counter__btn-min{
+      left:1px; }
+
+.counter__btn-min::before{
+        border-right:19px solid #015862;
+        left:-19px; }
+
+.counter__btn-pls{
+      -webkit-box-pack:end;
+      justify-content:flex-end;
+      right:1px; }
+
+.counter__btn-pls::before{
+        border-left:19px solid #015862;
+        right:-19px; }
+
+.counter__btn::before{
+      content:'';
+      position:absolute;
+      display:block;
+      border-top:32px solid transparent;
+      border-bottom:32px solid transparent; }
+
 .header{
   text-transform:uppercase;
   padding-top:50px;
@@ -302,8 +353,132 @@ button{
 .header__sign-in{
     margin-right:30px; }
 
+.hexagon{
+  position:relative;
+  height:68px;
+  border-top:solid 2px #00ffff;
+  border-bottom:solid 2px #00ffff;
+  color:#00ffff;
+  font-size:38px;
+  line-height:68px;
+  text-align:center;
+  font-weight:bold; }
+
+.hexagon::before, .hexagon::after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    width:45px;
+    height:45px;
+    top:8px;
+    -webkit-transform:scaleX(0.5774) rotate(-45deg);
+    -ms-transform:scaleX(0.5774) rotate(-45deg);
+    transform:scaleX(0.5774) rotate(-45deg);
+    background-color:inherit; }
+
+.hexagon::before{
+    left:-24px;
+    border-top:solid 3px #00ffff;
+    border-left:solid 3px #00ffff; }
+
+.hexagon::after{
+    right:-24px;
+    border-bottom:solid 3px #00ffff;
+    border-right:solid 3px #00ffff; }
+
+.hexagon__line::before, .hexagon__line::after{
+    content:'';
+    display:block;
+    width:110px;
+    height:2px;
+    position:absolute;
+    top:50%;
+    -webkit-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    transform:translateY(-50%); }
+
+.hexagon__line::after{
+    background:-webkit-linear-gradient(left, cyan 0%, #27316b 60%, rgba(74, 19, 128, 0) 100%);
+    background:linear-gradient(90deg, cyan 0%, #27316b 60%, rgba(74, 19, 128, 0) 100%);
+    right:-127px; }
+
+.hexagon__line::before{
+    background:-webkit-linear-gradient(right, cyan 0%, #27316b 60%, rgba(74, 19, 128, 0) 100%);
+    background:linear-gradient(270deg, cyan 0%, #27316b 60%, rgba(74, 19, 128, 0) 100%);
+    left:-127px; }
+
+.rate{
+  display:-webkit-box;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  flex-direction:column;
+  -webkit-box-align:center;
+  align-items:center;
+  font-family:MESevo;
+  font-weight:bold;
+  position:relative;
+  text-transform:uppercase; }
+
+.rate__result{
+    width:395px;
+    height:323px;
+    margin-bottom:40px;
+    background:url(../images/win-cube.png) no-repeat center center; }
+
+.rate__number{
+    top:34px;
+    font-size:64px;
+    color:#023d47;
+    position:absolute; }
+
+.rate__first{
+    left:93px; }
+
+.rate__second{
+    right:93px; }
+
+.rate__your-rate{
+    font-size:96px;
+    color:#00ffff;
+    position:absolute;
+    left:50%;
+    top:163px;
+    -webkit-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    transform:translateX(-50%); }
+
+.rate__cash{
+    margin:10px 0;
+    width:224px;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-pack:justify;
+    justify-content:space-between;
+    font-size:26px;
+    font-family:MES; }
+
+.rate__cash span{
+      cursor:pointer;
+      -webkit-transition:all 0.3s ease;
+      transition:all 0.3s ease; }
+
+.rate__cash span:hover{
+        color:#00ffff; }
+
+.rate__hex{
+    width:190px;
+    margin-top:18px; }
+
+.rate__hex-title{
+      font-family:MES;
+      margin-top:31px; }
+
+.rate__hex-title_top-offset{
+        margin-top:47px; }
+
 .chat{
-  max-width:700px;
+  max-width:560px;
   margin-top:50px;
   padding-bottom:100px;
   position:relative; }
@@ -325,8 +500,8 @@ button{
 .chat::after{
     width:100%;
     height:2px;
-    background:-webkit-linear-gradient(left, #00aab1 0%, rgba(0, 170, 177, 0) 80%);
-    background:linear-gradient(90deg, #00aab1 0%, rgba(0, 170, 177, 0) 80%); }
+    background:-webkit-linear-gradient(left, #00aab1 35%, rgba(0, 170, 177, 0) 100%);
+    background:linear-gradient(90deg, #00aab1 35%, rgba(0, 170, 177, 0) 100%); }
 
 .chat__tab{
     border-bottom:60px solid rgba(255, 255, 255, 0);
@@ -351,18 +526,18 @@ button{
       position:absolute;
       width:2px;
       height:73px;
-      top:-5px;
+      top:-4px;
       background:-webkit-linear-gradient(bottom, rgba(0, 118, 129, 0) 0%, #007681 50%);
       background:linear-gradient(0deg, rgba(0, 118, 129, 0) 0%, #007681 50%); }
 
 .chat__tab-text::after{
-      right:-18px;
+      right:-19px;
       -webkit-transform:rotate(-30deg);
       -ms-transform:rotate(-30deg);
       transform:rotate(-30deg); }
 
 .chat__tab-text::before{
-      left:-18px;
+      left:-19px;
       -webkit-transform:rotate(30deg);
       -ms-transform:rotate(30deg);
       transform:rotate(30deg); }
@@ -392,9 +567,6 @@ button{
       display:flex;
       margin-left:35px;
       margin-bottom:15px; }
-
-.chat__feed{
-    max-height:670px; }
 
 .chat__input{
     max-width:385px;
@@ -438,10 +610,13 @@ button{
       border-bottom:22px solid transparent;
       border-left:12px solid #00abb2; }
 
+.chat__feed{
+    max-height:670px;
+    padding:0 55px; }
+
 .message{
-  max-width:505px;
+  width:100%;
   padding-top:34px;
-  padding-left:55px;
   line-height:29px;
   font-size:22px; }
 
