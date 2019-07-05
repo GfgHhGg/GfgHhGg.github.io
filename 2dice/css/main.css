@@ -270,7 +270,16 @@ button{
   justify-content:space-between; }
 
 .counter{
-  width:300px; }
+  display:-webkit-box;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  flex-direction:column;
+  -webkit-box-align:center;
+  align-items:center; }
+
+.counter__hex{
+    width:300px; }
 
 .counter__btn{
     -webkit-user-select:none;
@@ -313,6 +322,24 @@ button{
       display:block;
       border-top:32px solid transparent;
       border-bottom:32px solid transparent; }
+
+.counter__row{
+    margin:10px 0;
+    width:224px;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-pack:justify;
+    justify-content:space-between;
+    font-size:26px;
+    font-family:MES; }
+
+.counter__row span{
+      cursor:pointer;
+      -webkit-transition:all 0.3s ease;
+      transition:all 0.3s ease; }
+
+.counter__row span:hover{
+        color:#00ffff; }
 
 .header{
   text-transform:uppercase;
@@ -407,6 +434,79 @@ button{
     background:linear-gradient(270deg, cyan 0%, #27316b 60%, rgba(74, 19, 128, 0) 100%);
     left:-127px; }
 
+.choice{
+  width:676px;
+  height:917px;
+  position:relative; }
+
+.choice__bg{
+    position:absolute;
+    top:-164px;
+    left:-115px;
+    z-index:-1; }
+
+.choice__row{
+    display:-webkit-box;
+    display:flex; }
+
+.choice__row:nth-child(2){
+      margin-left:114px; }
+
+.choice__row:nth-child(3){
+      margin-top:-36px; }
+
+.choice__row:nth-child(4){
+      margin-top:-35px;
+      margin-left:57px; }
+
+.choice__row:nth-child(5){
+      margin-top:-35px;
+      margin-left:114px; }
+
+.choice__row:nth-child(6){
+      margin-top:-36px;
+      margin-left:171px; }
+
+.choice__cube{
+    border-radius:40px;
+    cursor:pointer;
+    width:117px;
+    height:134px;
+    margin-left:54px;
+    background:url(../images/cube.png) center center no-repeat;
+    color:#00ffff;
+    font-family:MESevo;
+    font-size:64px;
+    font-weight:bold;
+    text-align:center;
+    line-height:133px;
+    -webkit-transition:all 0.3s ease;
+    transition:all 0.3s ease; }
+
+.choice__cube:nth-child(2){
+      margin-top:33px; }
+
+.choice__cube:nth-child(3){
+      margin-top:66px; }
+
+.choice__cube_active{
+      background-image:url(../images/cube-active.png);
+      color:#023d47; }
+
+.choice__text{
+    color:#00abb2;
+    font-size:30px;
+    line-height:28.8px;
+    text-align:right;
+    position:absolute;
+    left:31px;
+    bottom:213px; }
+
+.choice__bet{
+    position:absolute;
+    left:453px;
+    bottom:159px; }
+
 .rate{
   display:-webkit-box;
   display:flex;
@@ -447,24 +547,6 @@ button{
     -webkit-transform:translateX(-50%);
     -ms-transform:translateX(-50%);
     transform:translateX(-50%); }
-
-.rate__cash{
-    margin:10px 0;
-    width:224px;
-    display:-webkit-box;
-    display:flex;
-    -webkit-box-pack:justify;
-    justify-content:space-between;
-    font-size:26px;
-    font-family:MES; }
-
-.rate__cash span{
-      cursor:pointer;
-      -webkit-transition:all 0.3s ease;
-      transition:all 0.3s ease; }
-
-.rate__cash span:hover{
-        color:#00ffff; }
 
 .rate__hex{
     width:190px;

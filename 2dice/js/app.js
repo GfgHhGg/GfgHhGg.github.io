@@ -14,5 +14,15 @@ $('.counter').click(function (e) {
     $self.find('.counter__total').html(+sum + 100);
   } else if ($trg.hasClass('counter__btn-min') && sum > 100) {
     $self.find('.counter__total').html(sum - 100);
+  } else if ($trg.hasClass('counter__jump')) {
+    $self.find('.counter__total').html($trg.html());
+  }
+});
+$('.choice').click(function (e) {
+  var $trg = $(e.target);
+
+  if ($trg.hasClass('choice__cube') && !$trg.hasClass('choice__cube_active')) {
+    $('.choice__cube_active').removeClass('choice__cube_active');
+    $trg.addClass('choice__cube_active');
   }
 });
