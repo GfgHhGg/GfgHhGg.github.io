@@ -26,3 +26,21 @@ $('.choice').click(function (e) {
     $trg.addClass('choice__cube_active');
   }
 });
+var isModal = false;
+$('.open-modal').click(function (e) {
+  isModal = true;
+  $('.toggle').hide();
+  $('header').addClass('header_fixed');
+  $('#' + $(this).attr('data-modal')).addClass('modal_open');
+});
+$('.header__logo').click(function (e) {
+  isModal = false;
+  $('.toggle').show();
+  $('header').removeClass('header_fixed');
+  $('.modal_open').removeClass('modal_open');
+});
+$('.modal__tab').click(function (e) {
+  if ($(this).hasClass('modal__tab_active')) return;
+  $('.modal__tab_active').removeClass('modal__tab_active');
+  $(this).addClass('modal__tab_active');
+});
