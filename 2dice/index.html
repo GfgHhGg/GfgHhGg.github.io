@@ -14,123 +14,15 @@
       <div class="header container"><a href="#"><img class="header__logo" src="images/2dice-logo.png" alt="" role="presentation"/></a>
         <div class="header__blc-sign-wrp">
           <div class="header__balance toggle">
-            <p>баланс: 0,0050</p><a href="#"><img class="header__balance-img open-modal" src="images/transfer.png" data-modal="deposit" alt="" role="presentation"/></a>
+            <p>баланс: 0,0050</p><a href="deposit.html"><img class="header__balance-img open-modal" src="images/transfer.png" data-modal="deposit" alt="" role="presentation"/></a>
           </div>
-          <div class="header__sign-wrp toggle"><a class="header__sign-in header__sign-link open-modal" href="#" data-modal="sign-in">вход</a><a class="header__sign-up header__sign-link open-modal" href="#" data-modal="sign-up">регистрация</a>
+          <div class="header__sign-wrp toggle"><a class="header__sign-in header__sign-link open-modal" href="sign-in.html" data-modal="sign-in">вход</a><a class="header__sign-up header__sign-link open-modal" href="sign-up.html" data-modal="sign-up">регистрация</a>
           </div>
         </div>
       </div>
     </header>
     <main class="main">
       <div class="container">
-        <div class="modal" id="sign-up">
-          <form class="modal__form">
-            <div class="modal__title modal__title_underline">Регистрация
-            </div>
-            <div class="modal__label">Ваше имя
-            </div>
-            <div class="input input_no-btn modal__input"><input class="input__text input__text_no-btn" type="text"/>
-            </div>
-            <div class="modal__label">Пароль
-            </div>
-            <div class="input input_no-btn modal__input"><input class="input__text input__text_no-btn" type="text"/>
-            </div>
-            <div class="modal__label">Повторите пароль
-            </div>
-            <div class="input modal__input"><input class="input__text" type="text"/>
-              <button class="input__submit" type="submit">
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="modal" id="sign-in">
-          <form class="modal__form">
-            <div class="modal__title modal__title_underline">Вход
-            </div>
-            <div class="modal__label">Ваше имя
-            </div>
-            <div class="input input_no-btn modal__input"><input class="input__text input__text_no-btn" type="text"/>
-            </div>
-            <div class="modal__label">Пароль
-            </div>
-            <div class="input modal__input"><input class="input__text" type="text"/>
-              <button class="input__submit" type="submit">
-              </button>
-            </div><a class="modal__link" href="#">Забыли пароль?</a>
-          </form>
-        </div>
-        <div class="modal" id="deposi">
-          <div class="modal__container">
-            <div class="modal__title modal__title_center">Депозит
-            </div>
-            <div class="modal__main-wrp">
-              <div class="modal__tab-wrp">
-                <div class="modal__tab modal__tab_active">Bitcoin (BTC)
-                </div>
-                <div class="modal__tab">Ethereum (ETH)
-                </div>
-                <div class="modal__tab">LiteCoin (LTC)
-                </div>
-                <div class="modal__tab">Monero (MNR)
-                </div>
-              </div>
-              <div class="modal__main">
-                <div class="modal__exchange">
-                  <div class="modal__md-input-wrp">
-                    <div class="modal__md-label">Продажа
-                    </div><input class="modal__md-input modal__md-input_small" type="text"/><span class="modal__md-currency">btc</span>
-                  </div>
-                  <div class="modal__sep">=
-                  </div>
-                  <div class="modal__md-input-wrp">
-                    <div class="modal__md-label">Покупка
-                    </div><input class="modal__md-input modal__md-input_small" type="text"/><span class="modal__md-currency">fairc</span>
-                  </div>
-                </div>
-                <div class="modal__md-input-wrp">
-                  <div class="modal__md-input-btn-wrp"><input class="modal__md-input modal__md-input_big modal__md-input_tac" type="text"/>
-                    <button class="modal__md-btn">
-                    </button>
-                  </div>
-                </div><img class="modal__qr-code" src="images/qr-code.png" alt="" role="presentation"/>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal" id="deposit">
-          <div class="modal__container">
-            <div class="modal__title modal__title_center">Вывод
-            </div>
-            <div class="modal__main-wrp">
-              <div class="modal__tab-wrp">
-                <div class="modal__tab modal__tab_active">Bitcoin (BTC)
-                </div>
-                <div class="modal__tab">Ethereum (ETH)
-                </div>
-                <div class="modal__tab">LiteCoin (LTC)
-                </div>
-                <div class="modal__tab">Monero (MNR)
-                </div>
-              </div>
-              <div class="modal__main">
-                <div class="modal__md-input-wrp">
-                  <div class="modal__md-label">Количество
-                  </div>
-                  <div class="modal__md-input-btn-wrp"><input class="modal__md-input modal__md-input_big" type="text"/>
-                    <button class="modal__md-btn">Max
-                    </button>
-                  </div>
-                </div>
-                <div class="modal__md-input-wrp modal__md-input-wrp_top-offset">
-                  <div class="modal__md-input-btn-wrp"><input class="modal__md-input modal__md-input_big modal__md-input_tac" type="text"/>
-                    <button class="modal__md-btn">
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="page-content toggle">
           <div class="choice"><img class="choice__bg" src="images/cube-bg.png" alt="" role="presentation"/>
             <div class="choice__row">
