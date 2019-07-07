@@ -60,12 +60,13 @@ function slickInit() {
       variableWidth: true,
       slideToShow: 1,
       infinite: false,
-      arrows: false
-    });
+      arrows: false,
+      dots: true
+    }).css('display', 'block');
   }
 
   if ($('body').width() > 1070 && isSlickInit) {
     isSlickInit = false;
-    $('.page-content').slick('unslick');
+    $('.page-content').slick('unslick').css('display', 'flex');
   }
 }

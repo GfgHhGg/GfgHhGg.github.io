@@ -220,6 +220,9 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, 
   list-style:none;
   box-sizing:border-box; }
 
+html{
+  overflow-x:hidden; }
+
 body{
   font-family:'MES';
   font-size:19px;
@@ -455,6 +458,50 @@ button{
     left:100px;
     top:8px;
     z-index:10; }
+
+.header__blc-sign-wrp{
+    display:-webkit-box;
+    display:flex;
+    width:56.5%;
+    -webkit-box-pack:justify;
+    justify-content:space-between; }
+
+@media (max-width: 1680px){
+    .header{
+      -webkit-box-align:center;
+      align-items:center; }
+      .header__sign-wrp{
+        font-size:13px;
+        margin-top:0; }
+      .header__balance{
+        font-size:15px; }
+        .header__balance-img{
+          height:30px;
+          margin-left:15px; } }
+
+@media (max-width: 700px){
+    .header{
+      padding-top:10px; }
+      .header__blc-sign-wrp{
+        -webkit-box-orient:vertical;
+        -webkit-box-direction:normal;
+        flex-direction:column;
+        width:auto; }
+      .header__sign-wrp{
+        font-size:12px; }
+      .header__sign-in{
+        margin-right:20px; }
+      .header__balance{
+        -webkit-box-ordinal-group:2;
+        order:1;
+        margin-top:6px;
+        font-size:12px; }
+        .header__balance-img{
+          height:25px;
+          margin-left:10px;
+          margin-top:0; }
+      .header__logo{
+        width:115px; } }
 
 .hexagon{
   position:relative;
@@ -1021,6 +1068,27 @@ button{
   margin:0 -130px;
   margin-top:-110px; }
 
+.slick-dots{
+  display:-webkit-box;
+  display:flex;
+  -webkit-box-pack:justify;
+  justify-content:space-between;
+  width:170px;
+  margin:0 auto;
+  margin-top:60px; }
+
+.slick-dots .slick-active{
+    background-color:#00ffff; }
+
+.slick-dots li{
+    background-color:#fff;
+    width:20px;
+    height:20px;
+    border-radius:50px; }
+
+.slick-dots li button{
+      font-size:0; }
+
 @media (max-width: 1680px){
   .choice,
   .rate,
@@ -1034,31 +1102,31 @@ button{
     margin-right:-130px; }
   .choice{
     margin-right:-140px;
-    margin-left:-110px; }
-  .header{
-    -webkit-box-align:center;
-    align-items:center; }
-    .header__sign-wrp{
-      font-size:13px;
-      margin-top:0; }
-    .header__balance{
-      font-size:15px; }
-      .header__balance-img{
-        height:30px;
-        margin-left:15px; } }
+    margin-left:-110px; } }
 
 @media (max-width: 700px){
-  .header{
-    -webkit-box-orient:vertical;
-    -webkit-box-direction:normal;
-    flex-direction:column;
-    height:200px;
-    padding-top:20px; }
   .slick-slider{
     -webkit-transform:scale(0.5);
     -ms-transform:scale(0.5);
     transform:scale(0.5);
     margin:0 -220px;
-    margin-top:-180px; }
+    margin-top:-210px; }
   .container{
-    max-height:735px; } }
+    padding-right:12px;
+    padding-left:12px;
+    max-height:735px; }
+  .chat__input{
+    margin-top:40px; }
+  .chat::after{
+    background:#00abb2; }
+  .chat::before{
+    display:none; }
+  .chat__tab-wrp{
+    -webkit-box-pack:center;
+    justify-content:center; }
+  .rate__hex, .rate__hex-title_top-offset{
+    margin-top:10px; }
+  .play-btn{
+    margin-top:40px; }
+  .slick-dots{
+    margin-top:0; } }
