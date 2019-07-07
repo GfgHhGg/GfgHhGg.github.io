@@ -49,6 +49,7 @@ window.addEventListener('resize', function () {
 function slickInit() {
   if ($('body').width() <= 1070 && !isSlickInit) {
     isSlickInit = true;
+    console.log('here');
     $('.play-btn').show();
     $('.choice__bet').hide();
     $('.page-content').slick({
@@ -63,9 +64,12 @@ function slickInit() {
 
   if ($('body').width() > 1070 && isSlickInit) {
     isSlickInit = false;
+    $('.page-content').slick('unslick').css('display', 'flex');
+  }
+
+  if ($('body').width() > 1070) {
     $('.play-btn').hide();
     $('.choice__bet').show();
-    $('.page-content').slick('unslick').css('display', 'flex');
   }
 }
 

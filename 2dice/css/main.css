@@ -699,7 +699,8 @@ button{
 .choice__bet{
     position:absolute;
     left:453px;
-    bottom:159px; }
+    bottom:159px;
+    cursor:pointer; }
 
 .rate{
   display:-webkit-box;
@@ -1263,6 +1264,11 @@ button{
       max-width:750px; }
     .page__title{
       font-size:30px; }
+      .page__title_sm-offset{
+        margin-bottom:0;
+        padding-bottom:0; }
+    .page__photo-wrp{
+      margin:15px auto; }
     .page__tab{
       font-size:20px;
       height:54px;
@@ -1304,8 +1310,6 @@ button{
       max-height:115px; }
   .page{
     margin-top:60px; }
-    .page__photo-wrp{
-      margin:15px auto; }
     .page__label{
       font-size:16px; }
     .page__tab{
