@@ -49,6 +49,8 @@ window.addEventListener('resize', function () {
 function slickInit() {
   if ($('body').width() <= 1070 && !isSlickInit) {
     isSlickInit = true;
+    $('.play-btn').show();
+    $('.choice__bet').hide();
     $('.page-content').slick({
       centerMode: true,
       variableWidth: true,
@@ -61,6 +63,8 @@ function slickInit() {
 
   if ($('body').width() > 1070 && isSlickInit) {
     isSlickInit = false;
+    $('.play-btn').hide();
+    $('.choice__bet').show();
     $('.page-content').slick('unslick').css('display', 'flex');
   }
 }

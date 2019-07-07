@@ -418,6 +418,7 @@ button{
   position:relative;
   text-transform:uppercase;
   padding-top:50px;
+  z-index:10;
   display:-webkit-box;
   display:flex;
   -webkit-box-pack:justify;
@@ -470,7 +471,8 @@ button{
 @media (max-width: 1680px){
     .header{
       -webkit-box-align:center;
-      align-items:center; }
+      align-items:center;
+      padding-top:25px; }
       .header__sign-wrp{
         font-size:13px;
         margin-top:0; }
@@ -929,7 +931,8 @@ button{
     -ms-transform:scale(0.6);
     transform:scale(0.6);
     margin-top:-150px;
-    margin-right:-110px; }
+    margin-right:-110px;
+    margin-bottom:-200px; }
   .rate{
     margin-right:-130px; }
   .choice{
@@ -1321,7 +1324,9 @@ button{
         left:11px; }
     .page__title{
       font-size:25px;
-      margin-bottom:20px; }
+      margin-bottom:0; }
+      .page__title_underline{
+        padding-bottom:3px; }
     .page__sep{
       padding-top:25px;
       font-size:30px; }
