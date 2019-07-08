@@ -220,6 +220,9 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, 
   list-style:none;
   box-sizing:border-box; }
 
+.wrapper{
+  overflow:hidden; }
+
 body{
   font-family:'MES';
   font-size:19px;
