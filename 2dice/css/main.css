@@ -220,9 +220,6 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, 
   list-style:none;
   box-sizing:border-box; }
 
-html{
-  overflow-x:hidden; }
-
 body{
   font-family:'MES';
   font-size:19px;
@@ -982,7 +979,8 @@ button{
   font-weight:500; }
 
 .page-bg{
-    position:absolute; }
+    position:absolute;
+    z-index:-1; }
 
 .page-bg-1{
       top:0;
@@ -1205,6 +1203,8 @@ button{
     margin-top:34px; }
 
 .dropdown{
+  color:#fff;
+  background-color:#004451;
   z-index:10;
   position:absolute;
   right:20px;
@@ -1246,7 +1246,70 @@ button{
       -ms-transform:rotate(0deg);
       transform:rotate(0deg); }
 
+.stat{
+  margin:0 auto;
+  display:-webkit-box;
+  display:flex;
+  margin-bottom:100px;
+  -webkit-box-pack:justify;
+  justify-content:space-between;
+  max-width:770px; }
+
+.stat__page{
+    color:#fff;
+    font-weight:500; }
+
+.stat__col{
+    height:180px;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    flex-direction:column;
+    -webkit-box-pack:justify;
+    justify-content:space-between;
+    font-size:40px; }
+
+.achiev{
+  display:-webkit-box;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  flex-direction:column;
+  -webkit-box-align:center;
+  align-items:center;
+  font-size:30px; }
+
+.achiev__games{
+    font-weight:bold;
+    margin:10px 0; }
+
+.achiev-row{
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-pack:justify;
+    justify-content:space-between;
+    max-width:1172px;
+    margin:0 auto;
+    padding-bottom:50px; }
+
+.achiev svg{
+    fill:#fff; }
+
+.achiev_acive svg{
+    fill:#19B5FE; }
+
 @media (max-width: 1680px){
+  .stat{
+    max-width:570px;
+    margin-bottom:40px; }
+    .stat__col{
+      font-size:30px;
+      height:120px; }
+  .achiev{
+    font-size:25px; }
+    .achiev-row{
+      max-width:990px; }
   .page{
     margin-top:60px; }
     .page__link{
@@ -1294,10 +1357,35 @@ button{
       bottom:12px; } }
 
 @media (max-width: 1050px){
+  .stat{
+    margin-bottom:30px;
+    max-width:480px; }
+    .stat__col{
+      font-size:25px;
+      height:90px; }
+  .achiev{
+    font-size:16px; }
+    .achiev svg{
+      height:70px; }
+    .achiev-row{
+      max-width:830px;
+      padding-bottom:25px; }
   .page-bg{
     height:400px; } }
 
 @media (max-width: 700px){
+  .stat{
+    margin-bottom:20px;
+    max-width:420px; }
+    .stat__col{
+      font-size:20px;
+      height:55px; }
+  .achiev{
+    margin-bottom:25px; }
+    .achiev-row{
+      flex-wrap:wrap;
+      margin:0 auto;
+      max-width:360px; }
   .dropdown{
     font-size:14px;
     right:10px;
@@ -1356,6 +1444,13 @@ button{
       width:60px; } }
 
 @media (max-width: 440px){
+  .stat{
+    margin-bottom:10px; }
+    .stat__col{
+      font-size:16px;
+      height:45px; }
+  .achiev svg{
+    height:55px; }
   .dropdown{
     padding:7px 5px; }
   .page{
