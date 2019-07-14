@@ -29,123 +29,132 @@
         <div class="header-bottom">
           <div class="container container_flex"><a class="header-bottom__logo" href="index.html">Swapika</a>
             <ul class="menu">
-              <li class="menu__item underline"><a href="about.html">О нас</a>
+              <li class="menu__item underline"><a class="menu__link" href="about.html">О нас</a>
               </li>
-              <li class="menu__item"><a href="rules.html">Правила</a>
+              <li class="menu__item"><a class="menu__link" href="news.html">Правила</a>
               </li>
-              <li class="menu__item"><a href="contacts.html">Контакты</a>
+              <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a>
               </li>
-              <li class="menu__item"><a href="faq.html">FAQ</a>
+              <li class="menu__item"><a class="menu__link" href="faq.html">FAQ</a>
               </li>
-              <li class="menu__item"><a href="reviews.html">Отзывы</a>
+              <li class="menu__item"><a class="menu__link" href="reviews.html">Отзывы</a>
               </li>
-              <li class="menu__item"><a href="news.html">Новости</a>
+              <li class="menu__item"><a class="menu__link" href="news.html">Новости</a>
               </li>
-              <li class="menu__item"><a href="affiliate.html">Партнёрка</a>
+              <li class="menu__item"><a class="menu__link" href="affiliate.html">Партнёрка</a>
               </li>
             </ul>
+            <div class="burger-opener">
+              <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                <path class="line top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"></path>
+                <path class="line middle" d="m 30,50 h 40"></path>
+                <path class="line bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"></path>
+              </svg>
+            </div>
           </div>
         </div>
       </header>
       <main class="main">
-        <div class="container container_flex">
-          <div class="choice give">
-            <p class="choice__title choice__title_rotate">Вы отдаёте
-            </p>
-            <div class="choice__tab-wrp">
-              <div class="choice__tab choice__tab_active underline">Крипта
+        <section class="exchange-section">
+          <div class="container container_flex">
+            <div class="choice give"><span class="arrow-abs"></span>
+              <p class="choice__title choice__title_rotate">Вы отдаёте
+              </p>
+              <div class="choice__tab-wrp">
+                <div class="choice__tab choice__tab_active underline">Крипта
+                </div>
+                <div class="choice__tab">Банки
+                </div>
+                <div class="choice__tab">Платёжки
+                </div>
               </div>
-              <div class="choice__tab">Банки
-              </div>
-              <div class="choice__tab">Платёжки
+              <div class="currency-wrp currency-wrp_left">
+                <div class="currency currency currency_give active-give"><img src="images/currency/bitcoin.png">Bitcoin
+                </div>
+                <div class="currency currency currency_give"><img src="images/currency/ethereum.png">Ethereum
+                </div>
+                <div class="currency currency currency_give"><img src="images/currency/litecoin.png">Litecoin
+                </div>
+                <div class="currency currency currency_give"><img src="images/currency/monero.png">Monero
+                </div>
+                <div class="currency currency currency_give"><img src="images/currency/dash.png">Dash
+                </div>
+                <div class="currency currency currency_give"><img src="images/currency/dogecoin.png">Dogecoin
+                </div>
+                <div class="currency currency currency_give"><img src="images/currency/ripple.png">Ripple
+                </div>
+                <div class="currency currency currency_give"><img src="images/currency/ethereum.png">Ethereum
+                </div>
+                <div class="currency currency currency_give"><img src="images/currency/litecoin.png">Litecoin
+                </div>
+                <div class="currency currency currency_give"><img src="images/currency/bitcoin.png">Bitcoin
+                </div>
+                <div class="currency currency currency_give"><img src="images/currency/dash.png">Dash
+                </div>
               </div>
             </div>
-            <div class="currency-wrp">
-              <div class="currency currency_active-give"><img src="images/currency/bitcoin.png">Bitcoin
+            <div class="exchange">
+              <p class="exchange__title">Обмен Bitcoin <br>На Ethereum
+              </p>
+              <p class="exchange__course">1 BTC = 39.84751 ETH
+              </p>
+              <div class="block-input">
+                <p class="block-input__label">Отдаю Bitcoin
+                </p><img class="block-input__currency" src="images/currency/bitcoin.png" alt="" role="presentation"/><input class="block-input__input block-input__input_gold" type="text" value="0.01"/>
               </div>
-              <div class="currency"><img src="images/currency/ethereum.png">Ethereum
+              <div class="block-input">
+                <p class="block-input__label">Получаю Ethereum
+                </p><img class="block-input__currency" src="images/currency/ethereum.png" alt="" role="presentation"/><input class="block-input__input block-input__input_blue" type="text" value="0.4007"/>
               </div>
-              <div class="currency"><img src="images/currency/litecoin.png">Litecoin
+              <div class="block-input block-input_error">
+                <p class="block-input__label">Номер счёта/кошелька
+                </p><input class="block-input__input block-input__input_violet" type="text" value="1KoX6AA5VTdbBTkw27YE"/>
               </div>
-              <div class="currency"><img src="images/currency/monero.png">Monero
+              <div class="block-input">
+                <p class="block-input__label">Электронная почта
+                </p><input class="block-input__input" type="text" value="shalashowcih@gmail.com"/>
               </div>
-              <div class="currency"><img src="images/currency/dash.png">Dash
+              <div class="button exchange__btn">Обменять
               </div>
-              <div class="currency"><img src="images/currency/dogecoin.png">Dogecoin
+            </div>
+            <div class="choice take"><span class="arrow-abs"></span>
+              <p class="choice__title">Вы получаете
+              </p>
+              <div class="choice__tab-wrp">
+                <div class="choice__tab choice__tab_active underline">Крипта
+                </div>
+                <div class="choice__tab">Банки
+                </div>
+                <div class="choice__tab">Платёжки
+                </div>
               </div>
-              <div class="currency"><img src="images/currency/ripple.png">Ripple
-              </div>
-              <div class="currency"><img src="images/currency/ethereum.png">Ethereum
-              </div>
-              <div class="currency"><img src="images/currency/litecoin.png">Litecoin
-              </div>
-              <div class="currency"><img src="images/currency/bitcoin.png">Bitcoin
-              </div>
-              <div class="currency"><img src="images/currency/dash.png">Dash
+              <div class="currency-wrp currency-wrp_right">
+                <div class="currency currency currency_take"><img src="images/currency/bitcoin.png">Bitcoin
+                </div>
+                <div class="currency currency currency_take"><img src="images/currency/ethereum.png">Ethereum
+                </div>
+                <div class="currency currency currency_take"><img src="images/currency/litecoin.png">Litecoin
+                </div>
+                <div class="currency currency currency_take"><img src="images/currency/monero.png">Monero
+                </div>
+                <div class="currency currency currency_take"><img src="images/currency/dash.png">Dash
+                </div>
+                <div class="currency currency currency_take"><img src="images/currency/dogecoin.png">Dogecoin
+                </div>
+                <div class="currency currency currency_take"><img src="images/currency/ripple.png">Ripple
+                </div>
+                <div class="currency currency currency_take"><img src="images/currency/ethereum.png">Ethereum
+                </div>
+                <div class="currency currency currency_take"><img src="images/currency/litecoin.png">Litecoin
+                </div>
+                <div class="currency currency currency_take"><img src="images/currency/bitcoin.png">Bitcoin
+                </div>
+                <div class="currency currency currency_take"><img src="images/currency/dash.png">Dash
+                </div>
               </div>
             </div>
           </div>
-          <div class="exchange">
-            <p class="exchange__title">Обмен Bitcoin <br>На Ethereum
-            </p>
-            <p class="exchange__course">1 BTC = 39.84751 ETH
-            </p>
-            <div class="block-input">
-              <p class="block-input__label">Отдаю Bitcoin
-              </p><img class="block-input__currency" src="images/currency/bitcoin.png" alt="" role="presentation"/><input class="block-input__input block-input__input_gold" type="text" value="0.01"/>
-            </div>
-            <div class="block-input">
-              <p class="block-input__label">Получаю Ethereum
-              </p><img class="block-input__currency" src="images/currency/ethereum.png" alt="" role="presentation"/><input class="block-input__input block-input__input_blue" type="text" value="0.4007"/>
-            </div>
-            <div class="block-input block-input_error">
-              <p class="block-input__label">Номер счёта/кошелька
-              </p><input class="block-input__input block-input__input_violet" type="text" value="1KoX6AA5VTdbBTkw27YE"/>
-            </div>
-            <div class="block-input">
-              <p class="block-input__label">Электронная почта
-              </p><input class="block-input__input" type="text" value="shalashowcih@gmail.com"/>
-            </div>
-            <div class="button exchange__btn">Обменять
-            </div>
-          </div>
-          <div class="choice take">
-            <p class="choice__title">Вы получаете
-            </p>
-            <div class="choice__tab-wrp">
-              <div class="choice__tab choice__tab_active underline">Крипта
-              </div>
-              <div class="choice__tab">Банки
-              </div>
-              <div class="choice__tab">Платёжки
-              </div>
-            </div>
-            <div class="currency-wrp">
-              <div class="currency"><img src="images/currency/bitcoin.png">Bitcoin
-              </div>
-              <div class="currency currency_active-take"><img src="images/currency/ethereum.png">Ethereum
-              </div>
-              <div class="currency"><img src="images/currency/litecoin.png">Litecoin
-              </div>
-              <div class="currency"><img src="images/currency/monero.png">Monero
-              </div>
-              <div class="currency"><img src="images/currency/dash.png">Dash
-              </div>
-              <div class="currency"><img src="images/currency/dogecoin.png">Dogecoin
-              </div>
-              <div class="currency"><img src="images/currency/ripple.png">Ripple
-              </div>
-              <div class="currency"><img src="images/currency/ethereum.png">Ethereum
-              </div>
-              <div class="currency"><img src="images/currency/litecoin.png">Litecoin
-              </div>
-              <div class="currency"><img src="images/currency/bitcoin.png">Bitcoin
-              </div>
-              <div class="currency"><img src="images/currency/dash.png">Dash
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
       </main>
     </div>
     <script src="js/libs.js"></script>
