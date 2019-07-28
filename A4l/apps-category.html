@@ -9,6 +9,15 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="modal modal-exit" id="modal-search">
+        <div class="container modal-exit">
+          <div class="modal-exit icomoon ico-exit"></div>
+        </div>
+        <form class="modal-form modal-exit">
+          <input class="modal-input" type="text" placeholder="Поиск">
+          <button class="modal-submit" type="submit"><span class="icomoon ico-search"></span>Поиск</button>
+        </form>
+      </div>
       <header class="header">
         <div class="container">
           <div class="header-part">
@@ -16,15 +25,35 @@
               <div class="burger"></div>
             </div><a class="logo" href="index.html"><img src="images/logo.png"></a>
             <ul class="main-menu">
-              <li class="current-menu-item"><a href="#">Приложения</a></li>
-              <li><a href="#">Игры</a></li>
-              <li><a href="#">Публикации</a></li>
+              <li class="current-menu-item menu-item-has-children"><a href="index.html">Приложения</a>
+                <ul class="sub-menu">
+                  <li><a href="#">Бизнес</a></li>
+                  <li><a href="#">Детские</a></li>
+                  <li><a href="#">Здоровье и фитнес</a></li>
+                  <li><a href="#">Карты и навигация</a></li>
+                  <li><a href="#">Книги</a></li>
+                  <li><a href="#">Музыка</a></li>
+                  <li><a href="#">Образование и учеба</a></li>
+                  <li><a href="#">Погода</a></li>
+                  <li><a href="#">Покупки</a></li>
+                  <li><a href="#">Путешествие и туризм</a></li>
+                  <li><a href="#">Развлечения</a></li>
+                  <li><a href="#">Социальные сети</a></li>
+                  <li><a href="#">Спорт</a></li>
+                  <li><a href="#">Стиль жизни</a></li>
+                  <li><a href="#">Утилиты</a></li>
+                  <li><a href="#">Финансы</a></li>
+                  <li><a href="#">Фото и видео</a></li>
+                </ul>
+              </li>
+              <li><a href="games-home.html">Игры</a></li>
+              <li><a href="publications-home.html">Публикации</a></li>
             </ul>
           </div>
           <div class="header-part">
             <div class="social"><a class="social__link icomoon ico-facebook" href="#"></a><a class="social__link icomoon ico-telegram" href="#"></a><a class="social__link icomoon ico-insta" href="#"></a><a class="social__link icomoon ico-twiter" href="#"></a><a class="social__link icomoon ico-youtube" href="#"></a>
             </div>
-            <div class="search icomoon ico-search"></div>
+            <div class="search icomoon ico-search open-modal" data-modal="search"></div>
             <div class="lang-select-wrp">
               <div class="lang-select">
                 <div class="lang">RU</div>
@@ -38,7 +67,7 @@
           <div class="container">
             <div class="crumbs"><a href="#">Приложения</a><span class="sep"> › </span><a href="#">Фото и видео</a>
             </div>
-            <h2 class="page-title">
+            <h2 class="section-title">
                Публикации из раздела<br>Фото и Видео</h2>
             <p class="section-description">
               Здесь можно найти рекомендации по выбору
