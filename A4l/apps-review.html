@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>A 4 L | apps-rewiev</title>
+    <title>A 4 L | apps-review</title>
     <link href="css/main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -60,18 +60,29 @@
               </div>
             </div>
           </div>
+          <ul class="burger-menu">
+            <li><a href="index.html">Приложения</a></li>
+            <li><a href="games-home.html">Игры</a></li>
+            <li><a href="publications-home.html">Публикации</a></li>
+            <li><a href="games-home.html">Обои</a></li>
+            <li><a href="games-home.html">iOS</a></li>
+            <li><a href="games-home.html">iPhone XS</a></li>
+            <li><a href="games-home.html">Apple Watch</a></li>
+            <li><a href="games-home.html">Telegram-каналы</a></li>
+          </ul>
         </div>
       </header>
       <main class="main">
-        <section class="apps-rewiev">
+        <section class="apps-review">
           <div class="container">
             <div class="crumbs"><a href="#">Приложения</a><span class="sep"> › </span><a href="#">Фото и видео</a>
             </div>
             <h1 class="page-title">
-               Обзор приложения Steam Link:<br>нужно ли?</h1><img src="images/main_image_placeholder2.jpg">
-            <div class="rewiev-container">
-              <p class="rewiev-descript">
-                 Компания Valve (да-да, та самая, которая
+               Обзор приложения Steam Link:<br>нужно ли?</h1><img class="review-main-img" src="images/main_image_placeholder2.jpg">
+            <div class="review-descript">
+              <div class="review-social"><a class="icomoon ico-facebook" href="#"></a><a class="icomoon ico-telegram" href="#"></a><a class="icomoon ico-twiter" href="#"></a></div>
+              <p>
+                Компания Valve (да-да, та самая, которая
                 недавно выпустила DOTA Underlords)
                 относительно недавно представила
                 сервис Steam Link, о котором
@@ -79,15 +90,17 @@
               </p>
             </div>
             <div class="app-spec">
-              <div class="app-spec__top"><img class="app-spec__img" src="images/app-icon.png" alt="" role="presentation"/>
-                <div>
-                  <p class="app-spec__type">Приложение
-                  </p>
-                  <p class="app-spec__name">Steam Link
-                  </p>
-                  <div class="app-spec__price-wrp">
-                    <p class="app-spec__price">Стоимость: <span>$3.99</span>
-                    </p><a class="app-spec__save" href="#"><span class="underline">Скачать с AppStore</span><span class="icomoon ico-arrow"></span></a>
+              <div class="app-spec__top">
+                <div class="app-spec__left"><img class="app-spec__img" src="images/app-icon.png" alt="" role="presentation"/>
+                  <div>
+                    <p class="app-spec__type">Приложение
+                    </p>
+                    <p class="app-spec__name">Steam Link
+                    </p>
+                    <div class="app-spec__price-wrp">
+                      <p class="app-spec__price">Стоимость: <span>$3.99</span>
+                      </p><a class="app-spec__save" href="#"><span class="underline">Скачать с AppStore</span><span class="icomoon ico-arrow"></span></a>
+                    </div>
                   </div>
                 </div>
                 <div class="app-spec__right">
@@ -101,19 +114,23 @@
               <div class="app-spec__adv-dsadv-wrp">
                 <div class="app-spec__adv">
                   <div class="plus"></div>
+                  <p class="app-spec__label">Преимущества:
+                  </p>
                   <p>Сюжетная линия</p>
                   <p>Невероятная музыка</p>
                   <p>Непредсказуемая концовка</p>
                 </div>
                 <div class="app-spec__dsadv">
                   <div class="minus"></div>
+                  <p class="app-spec__label">Недостатки:
+                  </p>
                   <p>Мало уровней</p>
                   <p>Графика на любителя</p>
                   <p>Быстро приедается</p>
                 </div>
               </div>
             </div>
-            <div class="rewiev-container rewiev-content">
+            <div class="review-container review-content">
               <h2>Содержание</h2>
               <ol class="anchors">
                 <li><a href="#">1. Как настроить Steam Link</a></li>
@@ -135,7 +152,7 @@
                 имитирующих перетаскивание мыши. Все это 
                 настраивается в соответствующем меню в 
                 левой части экрана.
-              </p><img src="images/rewiev1.jpg">
+              </p><img src="images/review1.jpg">
               <h2>Как играть в игры через Steam Link</h2>
               <p>
                 После спаривания устройств вы можетезапускать любые игры, которые есть в
@@ -153,7 +170,7 @@
                 Как вы понимаете, все соревновательные
                 игры тоже можно вычеркнуть из списка
                 потенциальных «во что бы поиграть» продуктов.
-              </p><img src="images/rewiev2.jpg">
+              </p><img src="images/review2.jpg">
               <p class="img-descript">Но вот поиграть нормально так и не получилось</p>
               <p>
                  Поэтому если вдруг вам хочется 
@@ -207,6 +224,24 @@
                 программа их будущему не угрожает, и пропустили
                 ее в глобальный релиз.
               </p>
+            </div>
+            <div class="review-container">
+              <div class="subscribe">
+                <div class="subscribe__left">
+                  <div class="subscribe__label">Получайте свежие материалы на почту:
+                  </div>
+                  <FORM class="input-wrp input_grey">
+                    <input class="input" type="text" placeholder="Email"/>
+                    <button class="input-submit icomoon ico-arrow" type="submit"></button>
+                  </FORM>
+                </div>
+                <div class="subscribe__right">
+                  <div class="subscribe__label">Cледите за нами в соцсетях:
+                  </div>
+                  <div class="subscribe__social-wrp"><a class="subscribe__social icomoon ico-facebook" href="#">128</a><a class="subscribe__social icomoon ico-telegram" href="#">1K</a><a class="subscribe__social icomoon ico-twiter" href="#">1,5K</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -293,19 +328,21 @@
       </main>
       <footer class="footer">
         <div class="container">
-          <ul class="footer-menu">
-            <li>Приложения</li>
-            <li>Игры</li>
-            <li>iOS</li>
-            <li>iPhone</li>
-            <li>AppleWatch</li>
-          </ul>
-          <ul class="footer-menu">
-            <li>О проекте</li>
-            <li>Реклама</li>
-            <li>Авторам</li>
-            <li>Контакты</li>
-          </ul>
+          <div class="footer-menu-wrp">
+            <ul class="footer-menu">
+              <li>Приложения</li>
+              <li>Игры</li>
+              <li>iOS</li>
+              <li>iPhone</li>
+              <li>AppleWatch</li>
+            </ul>
+            <ul class="footer-menu">
+              <li>О проекте</li>
+              <li>Реклама</li>
+              <li>Авторам</li>
+              <li>Контакты</li>
+            </ul>
+          </div>
           <div class="footer-section">
             <p class="footer-section__label">Подписаться на рассылку
             </p>
@@ -319,8 +356,14 @@
             </p>
             <div class="social"><a class="social__link icomoon ico-facebook" href="#"></a><a class="social__link icomoon ico-telegram" href="#"></a><a class="social__link icomoon ico-insta" href="#"></a><a class="social__link icomoon ico-twiter" href="#"></a><a class="social__link icomoon ico-youtube" href="#"></a>
             </div>
-            <p class="footer-copyright">© 2019 Apps4Life. <br>All rights reserved.</p>
-            <p class="footer-copyright">Design by: <br>Artemov Artel</p>
+            <p class="footer-copyright">
+              © 2019 Apps4Life. 
+              All rights reserved.
+            </p>
+            <p class="footer-copyright">
+              Design by: 
+              Artemov Artel
+            </p>
           </div>
         </div>
       </footer>
