@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>A 4 L | apps-rewiev</title>
+    <title>A 4 L | apps-review</title>
     <link href="css/main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -25,7 +25,7 @@
               <div class="burger"></div>
             </div><a class="logo" href="index.html"><img src="images/logo.png"></a>
             <ul class="main-menu">
-              <li class="current-menu-item menu-item-has-children"><a href="index.html">Приложения</a>
+              <li class="menu-item-has-children"><a href="index.html">Приложения</a>
                 <ul class="sub-menu">
                   <li><a href="#">Бизнес</a></li>
                   <li><a href="#">Детские</a></li>
@@ -46,7 +46,7 @@
                   <li><a href="#">Фото и видео</a></li>
                 </ul>
               </li>
-              <li><a href="games-home.html">Игры</a></li>
+              <li class="current-menu-item"><a href="games-home.html">Игры</a></li>
               <li><a href="publications-home.html">Публикации</a></li>
             </ul>
           </div>
@@ -57,7 +57,8 @@
             <div class="lang-select-wrp">
               <div class="lang-select">
                 <div class="lang">RU</div>
-              </div>
+                <div class="lang">UK</div>
+              </div><img src="images/down-arrow.svg">
             </div>
           </div>
           <ul class="burger-menu">
@@ -73,15 +74,17 @@
         </div>
       </header>
       <main class="main">
-        <section class="apps-rewiev">
+        <section class="review-section review-section_blue">
           <div class="container">
             <div class="crumbs"><a href="#">Приложения</a><span class="sep"> › </span><a href="#">Фото и видео</a>
             </div>
             <h1 class="page-title">
-               Обзор приложения Steam Link:<br>нужно ли?</h1><img src="images/main_image_placeholder2.jpg">
-            <div class="rewiev-container">
-              <p class="rewiev-descript">
-                 Компания Valve (да-да, та самая, которая
+               Обзор приложения Steam Link:<br>нужно ли?</h1>
+            <div class="review-info"><span class="icomoon ico-eye">10</span><span class="review-info-sep">|</span><span>Олег Цегельник</span><span class="review-info-sep">|</span><span>24 июня 2019</span></div><img class="review-main-img" src="images/main_image_placeholder2.jpg">
+            <div class="review-descript">
+              <div class="review-social"><a class="icomoon ico-facebook" href="#"></a><a class="icomoon ico-telegram" href="#"></a><a class="icomoon ico-twiter" href="#"></a></div>
+              <p>
+                Компания Valve (да-да, та самая, которая
                 недавно выпустила DOTA Underlords)
                 относительно недавно представила
                 сервис Steam Link, о котором
@@ -89,15 +92,17 @@
               </p>
             </div>
             <div class="app-spec">
-              <div class="app-spec__top"><img class="app-spec__img" src="images/app-icon.png" alt="" role="presentation"/>
-                <div>
-                  <p class="app-spec__type">Приложение
-                  </p>
-                  <p class="app-spec__name">Steam Link
-                  </p>
-                  <div class="app-spec__price-wrp">
-                    <p class="app-spec__price">Стоимость: <span>$3.99</span>
-                    </p><a class="app-spec__save" href="#"><span class="underline">Скачать с AppStore</span><span class="icomoon ico-arrow"></span></a>
+              <div class="app-spec__top">
+                <div class="app-spec__left"><img class="app-spec__img" src="images/app-icon.png" alt="" role="presentation"/>
+                  <div>
+                    <p class="app-spec__type">Приложение
+                    </p>
+                    <p class="app-spec__name">Steam Link
+                    </p>
+                    <div class="app-spec__price-wrp">
+                      <p class="app-spec__price">Стоимость: <span>$3.99</span>
+                      </p><a class="app-spec__save" href="#"><span class="underline">Скачать с AppStore</span><span class="icomoon ico-arrow"></span></a>
+                    </div>
                   </div>
                 </div>
                 <div class="app-spec__right">
@@ -111,19 +116,23 @@
               <div class="app-spec__adv-dsadv-wrp">
                 <div class="app-spec__adv">
                   <div class="plus"></div>
+                  <p class="app-spec__label">Преимущества:
+                  </p>
                   <p>Сюжетная линия</p>
                   <p>Невероятная музыка</p>
                   <p>Непредсказуемая концовка</p>
                 </div>
                 <div class="app-spec__dsadv">
                   <div class="minus"></div>
+                  <p class="app-spec__label">Недостатки:
+                  </p>
                   <p>Мало уровней</p>
                   <p>Графика на любителя</p>
                   <p>Быстро приедается</p>
                 </div>
               </div>
             </div>
-            <div class="rewiev-container rewiev-content">
+            <div class="review-container review-content">
               <h2>Содержание</h2>
               <ol class="anchors">
                 <li><a href="#">1. Как настроить Steam Link</a></li>
@@ -145,7 +154,7 @@
                 имитирующих перетаскивание мыши. Все это 
                 настраивается в соответствующем меню в 
                 левой части экрана.
-              </p><img src="images/rewiev1.jpg">
+              </p><img src="images/review1.jpg">
               <h2>Как играть в игры через Steam Link</h2>
               <p>
                 После спаривания устройств вы можетезапускать любые игры, которые есть в
@@ -163,7 +172,7 @@
                 Как вы понимаете, все соревновательные
                 игры тоже можно вычеркнуть из списка
                 потенциальных «во что бы поиграть» продуктов.
-              </p><img src="images/rewiev2.jpg">
+              </p><img src="images/review2.jpg">
               <p class="img-descript">Но вот поиграть нормально так и не получилось</p>
               <p>
                  Поэтому если вдруг вам хочется 
@@ -217,6 +226,24 @@
                 программа их будущему не угрожает, и пропустили
                 ее в глобальный релиз.
               </p>
+            </div>
+            <div class="review-container">
+              <div class="subscribe">
+                <div class="subscribe__left">
+                  <div class="subscribe__label">Получайте свежие материалы на&nbsp;почту:
+                  </div>
+                  <FORM class="input-wrp input_grey">
+                    <input class="input" type="text" placeholder="Email"/>
+                    <button class="input-submit icomoon ico-arrow" type="submit"></button>
+                  </FORM>
+                </div>
+                <div class="subscribe__right">
+                  <div class="subscribe__label">Cледите за нами в соцсетях:
+                  </div>
+                  <div class="subscribe__social-wrp"><a class="subscribe__social icomoon ico-facebook" href="#">128</a><a class="subscribe__social icomoon ico-telegram" href="#">1K</a><a class="subscribe__social icomoon ico-twiter" href="#">1,5K</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

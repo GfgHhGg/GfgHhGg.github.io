@@ -24,3 +24,6 @@ $('.burger-wrp').click(function (e) {
     $menu.css('right', 'calc(100% - 275px)');
   }
 });
+$('.lang-select-wrp').click(function () {
+  $(this).toggleClass('lang-select-open');
+});
